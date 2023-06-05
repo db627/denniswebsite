@@ -1,9 +1,8 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
-import { firestore } from "firebaseConfig";
 import { addDoc, collection } from "firebase/firestore/lite";
-
+import { firestore } from "firebaseConfig.js"; // Adjust the path according to your directory structure
 
 export const sendContactForm = async ({ name, email, message }) => {
   try {
@@ -22,11 +21,11 @@ export const sendContactForm = async ({ name, email, message }) => {
 };
 
 const ContactForm = () => {
-  const [message, setMessage] = useState("");
+  const [userMessage, setUserMessage] = useState("");
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    comment: "",
+    message: "", // Changed 'comment' to 'message'
   });
 
   const formRef = useRef();
@@ -43,13 +42,12 @@ const ContactForm = () => {
 
     const res = await sendContactForm(formState);
     if (res === 0) {
-      setMessage("Thank you for your valuable comment!");
+      setUserMessage("Thank you for your valuable comment!");
       formRef.current.reset();
     } else {
-      setMessage("Something went wrong! Please try again");
+      setUserMessage("Something went wrong! Please try again");
     }
   };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -58,7 +56,12 @@ const ContactForm = () => {
       className="flex flex-col items-center justify-center b"
     >
       <h2 className="text-4xl mb-4">Contact Me</h2>
-      <form className="flex flex-col border-black border-2 rounded-lg p-10" style={{width: '60em'}} onSubmit={submitContact}>
+      <form
+        ref={formRef} 
+        className="flex flex-col border-black border-2 rounded-lg p-10" 
+        style={{width: '60em'}} 
+        onSubmit={submitContact}
+      >
         <motion.input
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
@@ -85,9 +88,9 @@ const ContactForm = () => {
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
           className="border-none bg-transparent p-2 mb-4 rounded-lg outline-none text-white placeholder-white"
-          name="comment"
+          name="message"
           placeholder="Your Message"
-          value={formState.comment}
+          value={formState.message}
           onChange={handleChange}
           required
         />
@@ -101,7 +104,7 @@ const ContactForm = () => {
           Submit
         </motion.button>
       </form>
-      {message && <div>{message}</div>}
+      {userMessage && <div>{userMessage}</div>}
     </motion.div>
   );
 };
