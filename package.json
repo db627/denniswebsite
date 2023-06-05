@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.2",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.11.5",
     "autoprefixer": "10.4.14",
+    "firebase": "^9.22.1",
     "framer-motion": "^10.12.16",
     "next": "13.4.4",
     "postcss": "8.4.24",

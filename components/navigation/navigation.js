@@ -15,7 +15,7 @@ const navItemVariants = {
 
 export default function Navigation() {
   return (
-    <motion.div className="navbar bg-base-100">
+    <motion.div className="navbar ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ export default function Navigation() {
           </label>
           <motion.ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-teal-400"
             variants={navItemVariants}
             initial="hidden"
             animate="show"
@@ -60,10 +60,10 @@ export default function Navigation() {
             </li>
           </motion.ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Dennis Boguslavskiy</a>
+        <a className="btn btn-ghost normal-case text-xl text-teal-400">Dennis Boguslavskiy</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <motion.ul className="menu menu-horizontal px-1" variants={navItemVariants} initial="hidden" animate="show">
+        <motion.ul className="menu menu-horizontal px-1 text-teal-400" variants={navItemVariants} initial="hidden" animate="show">
           <li>
             <a>About Me</a>
           </li>
@@ -86,7 +86,7 @@ export default function Navigation() {
         </motion.ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Resume</a>
+        <a className="btn text-teal-400">Resume</a>
       </div>
     </motion.div>
   );
