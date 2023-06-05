@@ -1,6 +1,7 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
 import Car from "/public/carimg22-scaled.jpg";
+import Dennis from "/public/dennis-boguslavskiy.jpg"
 
 export default function About() {
   const { scrollYProgress } = useViewportScroll();
@@ -33,9 +34,9 @@ export default function About() {
           style={{ opacity, scale }}
         >
           <Image
-            src={Car}
+            src={Dennis}
             alt="Dennis Boguslavskiy Image"
-            className="border-4 border-white rounded-lg overflow-hidden shadow-xl"
+            className="border-4 border-white rounded-full overflow-hidden shadow-xl"
             width={400}
             height={400}
             objectFit="cover"
