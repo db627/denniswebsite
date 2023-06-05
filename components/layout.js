@@ -5,6 +5,7 @@ import Hero from './hero/hero';
 import Footer from './footer/footer';
 import Skills from './skills/skills';
 import Form from './form/form'
+import Heading from './heading/heading';
 
 export default function Layout({ children }) {
   const { scrollYProgress } = useViewportScroll();
@@ -12,6 +13,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="bg-gradient-to-br from-color1 via-color2 to-color3">
+      <Heading />
       <Navigation />
       <Hero />
       <About />

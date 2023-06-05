@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
+h1, h2{
+  font-family: 'MuseoModerno';
+}
+nav{
+  font-family: 'MuseoModerno';
+  font-weight: bold;
+}
+form, p{
+  color: rgb(168, 168, 168);
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+button{
+  font-family: 'Montserrat', sans-serif;
+}
 ::-webkit-scrollbar {
     width: 10px;
   }

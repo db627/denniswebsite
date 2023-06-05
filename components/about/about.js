@@ -10,7 +10,8 @@ export default function About() {
 
   return (
     <motion.div
-      className=" min-h-screen flex flex-col items-center justify-center text-white p-16 bg-black bg-opacity-20"
+      className=" min-h-screen flex flex-col items-center justify-center text-white p-16 bg-black bg-opacity-20 "
+      id="aboutsection"
       style={{ y: translateY, opacity }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start max-w-screen-lg mx-auto">
@@ -19,14 +20,13 @@ export default function About() {
             className="text-4xl md:text-6xl text-teal-400 font-semibold mb-8 tracking-wide"
             style={{ scale }}
           >
-            About Me:
+            My Story:
           </motion.h1>
           <motion.p
-            className="text-xl md:text-2xl font-medium"
+            className="text-xl md:text-lg"
             style={{ scale }}
           >
-            I am a student at the New Jersey Institute of Technology as well as
-            a web developer and aspiring software engineer.
+            I'm Dennis Boguslavskiy, a Computing and Business student at the New Jersey Institute of Technology, with a minor in Mobile and Web Development. Alongside my studies, I operate as a freelance website developer and social media marketer, applying my academic insights to real-world projects. My interests also encompass photography and spending time with loved ones. Emphasizing a data-driven approach and teamwork, I strive to foster growth and innovation in all my professional endeavors.
           </motion.p>
         </motion.div>
         <motion.div
