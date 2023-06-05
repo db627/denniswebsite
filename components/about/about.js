@@ -1,7 +1,7 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
 import Car from "/public/carimg22-scaled.jpg";
-// import Dennis from "/public/dennis.JPG";
+import Dennis from "/public/dennis.png"
 
 export default function About() {
   const { scrollYProgress } = useViewportScroll();
@@ -55,7 +55,7 @@ export default function About() {
           whileHover="hover"
         >
           <Image
-            src={Car}
+            src={Dennis}
             alt="Dennis Boguslavskiy Image"
             className="border-4 border-white rounded-full overflow-hidden shadow-xl"
             width={400}
