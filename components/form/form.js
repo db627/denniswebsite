@@ -53,13 +53,13 @@ const ContactForm = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex flex-col items-center justify-center b"
+      className="flex flex-col items-center justify-center"
     >
       <h2 className="text-4xl mb-4">Contact Me</h2>
       <form
         ref={formRef} 
         className="flex flex-col border-black border-2 rounded-lg p-10" 
-        style={{width: '60em'}} 
+        style={{width: '70%'}} 
         onSubmit={submitContact}
       >
         <motion.input
