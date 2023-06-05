@@ -1,7 +1,7 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
 import Car from "/public/carimg22-scaled.jpg";
-import Dennis from "/public/dennis-boguslavskiy.jpg"
+import Dennis from "/public/dennis-boguslavskiy.JPG"
 
 export default function About() {
   const { scrollYProgress } = useViewportScroll();
