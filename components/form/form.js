@@ -54,6 +54,7 @@ const ContactForm = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="flex flex-col items-center justify-center bg-black bg-opacity-20 p-10"
+      id="contact"
     >
       <h2 className="text-6xl mb-4 text-white font-bold">Contact Me</h2>
       <form

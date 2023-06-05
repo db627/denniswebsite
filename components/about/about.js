@@ -1,7 +1,7 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
 import Car from "/public/carimg22-scaled.jpg";
-import Dennis from "/public/dennis.JPG";
+// import Dennis from "/public/dennis.JPG";
 
 export default function About() {
   const { scrollYProgress } = useViewportScroll();
@@ -26,7 +26,7 @@ export default function About() {
   return (
     <motion.div
       className=" min-h-screen flex flex-col items-center justify-center text-white p-16 bg-black bg-opacity-20 "
-      id="aboutsection"
+      id="about"
       style={{ y: translateY, opacity }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start max-w-screen-lg mx-auto">
@@ -55,7 +55,7 @@ export default function About() {
           whileHover="hover"
         >
           <Image
-            src={Dennis}
+            src={Car}
             alt="Dennis Boguslavskiy Image"
             className="border-4 border-white rounded-full overflow-hidden shadow-xl"
             width={400}

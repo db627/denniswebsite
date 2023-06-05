@@ -37,31 +37,31 @@ export default function Navigation() {
             </label>
             <motion.ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-teal-400"
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-black bg-opacity-90 rounded-box w-52 text-teal-400"
               variants={navItemVariants}
               initial="hidden"
               animate="show"
             >
               <li>
-                <a href="#aboutsection">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a>Parent</a>
+                <a>Proejcts </a>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <a>Project 1</a>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <a>Project 2</a>
                   </li>
                 </ul>
               </li>
-              <li>
-                <a>Item 3</a>
+              <li href="#contact">
+                <a>Contact</a>
               </li>
             </motion.ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl text-teal-400">
+          <a className="btn btn-ghost normal-case text-xl pr-3 text-teal-400" href="/">
             Dennis Boguslavskiy
           </a>
         </div>
@@ -73,7 +73,7 @@ export default function Navigation() {
             animate="show"
           >
             <li>
-              <a>About Me</a>
+              <a href="#about">About Me</a>
             </li>
             <li tabIndex={0}>
               <details>
@@ -89,7 +89,7 @@ export default function Navigation() {
               </details>
             </li>
             <li>
-              <a>Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </motion.ul>
         </div>
