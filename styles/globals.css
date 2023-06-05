@@ -9,7 +9,7 @@ nav{
   font-family: 'MuseoModerno';
   font-weight: bold;
 }
-form, p{
+form{
   color: rgb(168, 168, 168);
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;

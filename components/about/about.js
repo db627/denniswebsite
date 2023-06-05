@@ -1,13 +1,27 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
 import Car from "/public/carimg22-scaled.jpg";
-import Dennis from "/public/dennis-boguslavskiy.JPG"
+import Dennis from "/public/dennis.JPG";
 
 export default function About() {
   const { scrollYProgress } = useViewportScroll();
-  const translateY = useTransform(scrollYProgress, [0.05, 0.2], ["100vh", "0vh"]);
+  const translateY = useTransform(
+    scrollYProgress,
+    [0.05, 0.2],
+    ["100vh", "0vh"]
+  );
   const opacity = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
   const scale = useTransform(scrollYProgress, [0.1, 0.9], [1, 1.1]);
+
+  const imageVariants = {
+    hover: {
+      y: ["-2%", "2%"],
+      transition: {
+        duration: 0.5,
+        yoyo: Infinity,
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -23,15 +37,22 @@ export default function About() {
           >
             My Story:
           </motion.h1>
-          <motion.p
-            className="text-xl md:text-lg"
-            style={{ scale }}
-          >
-            I'm Dennis Boguslavskiy, a Computing and Business student at the New Jersey Institute of Technology, with a minor in Mobile and Web Development. Alongside my studies, I operate as a freelance website developer and social media marketer, applying my academic insights to real-world projects. My interests also encompass photography and spending time with loved ones. Emphasizing a data-driven approach and teamwork, I strive to foster growth and innovation in all my professional endeavors.
+          <motion.p className="text-xl md:text-lg" style={{ scale }}>
+            I'm Dennis Boguslavskiy, a Computing and Business student at the New
+            Jersey Institute of Technology, with a minor in Mobile and Web
+            Development. Alongside my studies, I operate as a freelance website
+            developer and social media marketer, applying my academic insights
+            to real-world projects. My interests also encompass photography and
+            spending time with loved ones. Emphasizing a data-driven approach
+            and teamwork, I strive to foster growth and innovation in all my
+            professional endeavors.
           </motion.p>
         </motion.div>
         <motion.div
+          className="..."
           style={{ opacity, scale }}
+          variants={imageVariants}
+          whileHover="hover"
         >
           <Image
             src={Dennis}
