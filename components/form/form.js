@@ -61,7 +61,7 @@ const ContactForm = () => {
       setUserMessage("Thank you for your valuable comment!");
       formRef.current.reset();
     } else {
-      setUserMessage("Something went wrong! Please try again");
+      setUserMessage("Something went wrong! Please try again! If more errors persist email me at dennisboguslavskiy@gmail.com !");
     }
   };
 
