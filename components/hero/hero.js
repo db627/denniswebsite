@@ -57,16 +57,15 @@ const HeroSection = () => {
             className="btn btn-primary text-teal-600 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-teal-600 hover:text-white"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            href="#aboutsection"
           >
-            About Me
+            <a href="#about">About Me</a>
           </motion.button>
           <motion.button
             className="btn btn-secondary text-slate-500 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-slate-500 hover:text-white"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Contact
+            <a href="#contact">Contact</a>
           </motion.button>
         </div>
       </div>
