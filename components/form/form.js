@@ -56,7 +56,7 @@ const ContactForm = () => {
       className="flex flex-col items-center justify-center bg-black bg-opacity-20 p-10"
       id="contact"
     >
-      <h2 className="text-6xl mb-4 text-center text-teal-300 font-bold">Contact Me</h2>
+      <h2 className="text-6xl mb-4 text-center text-teal-300 font-bold pb-3">Contact Me</h2>
       <form
         ref={formRef} 
         className="flex flex-col " 
