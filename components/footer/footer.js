@@ -1,25 +1,54 @@
+import { motion } from 'framer-motion';
+import Github from '/public/github_logo.png'
+import Image from 'next/image'
+import Instagram from '/public/instagram_logo.png'
+
+const footerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 export default function Footer() {
+
+
   return (
-    <footer className="footer p-10 bg-neutral text-neutral-content">
-      <div>
-        <span className="footer-title">Services</span>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+    <footer
+      variants={footerVariants}
+      initial='hidden'
+      className='grid grid-cols-1 gap-4 p-4 text-white'
+    >
+      <div className='grid grid-cols-1 sm:grid-cols-3'>
+        <div className='flex justify-center'>
+          <a href='/privacy-policy' className='hover:underline'>
+            Privacy Policy
+          </a>
+        </div>
+        <div className='flex justify-center'>
+          <a href='https://www.linkedin.com/in/dennis-boguslavskiy/' className='hover:underline' target='_blank' rel='noopener noreferrer'>
+            LinkedIn
+          </a>
+        </div>
+        <div className='flex justify-center'>
+          <a href='#top' className='hover:underline'>
+            Back to Top
+          </a>
+        </div>
       </div>
-      <div>
-        <span className="footer-title">Company</span>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </div>
-      <div>
-        <span className="footer-title">Legal</span>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
+      <div className='flex gap-4 mt-4 items-center justify-center'>
+        {/* Replace # with your actual social media links */}
+        <a href='https://instagram.com/dennisbogus' className='hover:underline justify-center' target='_blank'>
+          {/* Replace this with your actual social media icon */}
+          <Image src={Instagram} alt="Instagram" width={20}/>
+        </a>
+        <a href='https://github.com/db627' className='hover:underline justify-center ' target='_blank'>
+          {/* Replace this with your actual social media icon */}
+          <Image src={Github} alt="GitHub" width={20}/>
+        </a>
       </div>
     </footer>
   );

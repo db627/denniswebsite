@@ -15,7 +15,7 @@ const navItemVariants = {
 
 export default function Navigation() {
   return (
-    <nav>
+    <nav id="top">
       <motion.div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
