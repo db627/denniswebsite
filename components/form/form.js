@@ -1,8 +1,7 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-import { addDoc, collection } from "firebase/firestore/lite";
+import { serverTimestamp, addDoc, collection } from "firebase/firestore/lite";
 import { firestore } from "firebaseConfig.js"; // Adjust the path according to your directory structure
 
 const contactFormVariants = {
@@ -24,7 +23,7 @@ export const sendContactForm = async ({ name, email, message }) => {
       name,
       email,
       message,
-      sentAt: new Date(),
+      sentAt: serverTimestamp(),
     });
     return 0;
   } catch (err) {
