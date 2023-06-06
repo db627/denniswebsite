@@ -44,8 +44,8 @@ const Skills = () => {
             <Image
               src={skill.logo}
               alt={`${skill.name} logo`}
-              width={72}
-              height={72}
+              width={40}
+              height={40}
               className='pb-3'
             />
             <span>{skill.name}</span>
