@@ -1,5 +1,6 @@
-import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 import Bootstrap from "/public/bootstrap.png";
 import CSS from "/public/css.png";
@@ -21,16 +22,33 @@ const skills = [
   { name: "Python", logo: Python },
 ];
 
+const skillsVariants = {
+  hidden: { opacity: 0, x: -50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Skills = () => {
-  const { scrollYProgress } = useViewportScroll();
-  const translateY = useTransform(scrollYProgress, [0.1, 0.4], ['100vh', '0vh']);
-  const opacity = useTransform(scrollYProgress, [0.1, 0.4], [0, 1]);
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Triggers the animation only once
+    threshold: 0.1, // 10% of the element is visible
+  });
 
   return (
     <motion.div
+      ref={ref}
       className=" py-16 text-white flex flex-col items-center"
-      style={{ minHeight: '200px', y: translateY, opacity }}
+      style={{ minHeight: '200px'}}
       transition={{ duration: 2 }}
+      variants={skillsVariants}
+      initial="hidden"
+      animate={inView ? 'show' : 'hidden'}
     >
       <h2 className="text-4xl font-bold mb-8">Skills</h2>
       <div className="flex flex-wrap justify-center">
@@ -38,8 +56,7 @@ const Skills = () => {
           <motion.div
             className="p-4 rounded bg-transparent text-white text-lg font-bold m-8 flex flex-col items-center"
             key={index}
-            style={{ opacity }}
-            transition={{ delay: index * 0.1 }}
+            whileHover={{ scale: 1.1 }}
           >
             <Image
               src={skill.logo}

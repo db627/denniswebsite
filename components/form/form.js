@@ -1,8 +1,21 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import { addDoc, collection } from "firebase/firestore/lite";
 import { firestore } from "firebaseConfig.js"; // Adjust the path according to your directory structure
+
+const contactFormVariants = {
+  hidden: { opacity: 0, x: -50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1.5,
+      ease: "easeInOut",
+    },
+  },
+};
 
 export const sendContactForm = async ({ name, email, message }) => {
   try {
@@ -21,11 +34,15 @@ export const sendContactForm = async ({ name, email, message }) => {
 };
 
 const ContactForm = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   const [userMessage, setUserMessage] = useState("");
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    message: "", // Changed 'comment' to 'message'
+    message: "",
   });
 
   const formRef = useRef();
@@ -48,13 +65,15 @@ const ContactForm = () => {
       setUserMessage("Something went wrong! Please try again");
     }
   };
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      ref={ref}
       className="flex flex-col items-center justify-center bg-black bg-opacity-20 p-10"
       id="contact"
+      variants={contactFormVariants}
+      initial="hidden"
+      animate={inView ? 'show' : 'hidden'}
     >
       <h2 className="text-6xl mb-4 text-center text-teal-300 font-bold pb-3">Contact Me</h2>
       <form
