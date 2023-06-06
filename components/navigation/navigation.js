@@ -43,12 +43,12 @@ export default function Navigation() {
               animate="show"
             >
               <li>
-                <a href="#about">About</a>
+                <a href="/#about">About</a>
               </li>
               <li>
                 <a href="/blog">Blog</a>
               </li>
-              <li href="#contact">
+              <li href="/#contact">
                 <a>Contact</a>
               </li>
             </motion.ul>
