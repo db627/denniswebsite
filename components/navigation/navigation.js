@@ -57,7 +57,7 @@ export default function Navigation() {
             className="btn btn-ghost normal-case text-xl pr-3 text-teal-400"
             href="/"
           >
-            Dennis Boguslavskiy
+            Dennis B
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -78,8 +78,8 @@ export default function Navigation() {
             </li>
           </motion.ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn text-teal-400" href="/resume">
+        <div className="navbar-end ">
+          <a className="btn text-teal-400 ml-10" href="/resume">
             Resume
           </a>
         </div>
