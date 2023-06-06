@@ -17,7 +17,11 @@ form{
 button{
   font-family: 'Montserrat', sans-serif;
 }
-
+footer{
+  font-family: 'Montserrat', sans-serif;
+  color: teal;
+  font-weight: 500;
+}
 ::-webkit-scrollbar {
     width: 10px;
   }
