@@ -8,9 +8,9 @@ export default function Resumebody() {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2 }}
     >
-      <div className="flex flex-col justify-between w-full mt-6 space-y-6 sm:flex-row sm:space-y-0 border-2 border-teal-300 rounded-lg py-3">
+      <div className="flex flex-col justify-between w-full mt-6 space-y-6 sm:flex-row sm:space-y-0 border-2 border-teal-300 rounded-lg p-3">
         <div className="flex items-center justify-start text-xl font-bold">
-          <span className="ml-5">Dennis Boguslavskiy</span>
+          <span className="ml-1">Dennis Boguslavskiy</span>
         </div>
         <div className="flex flex-col items-start justify-start">
           <span className="pr-3">dennisboguslavskiy@gmail.com</span>
@@ -115,14 +115,30 @@ export default function Resumebody() {
           </div>
         </div>
       </div>
-      <div className="px-6 mt-6">
+      <div className="px-6 mt-6 border-2 border-teal-300 rounded-lg pt-5 pb-5">
         <div className="font-bold text-xl">Experience</div>
         <div className="mt-2">
           <div className="font-semibold">Contractor – Stay Healthy Inc</div>
           <div className="text-sm text-gray-600">
             Webflow Web Developer | April 26, 2023 - Present
           </div>
-          {/* Add your experience details here */}
+          <ul>
+            <li>
+              • Developed and maintained an e-commerce site using Webflow,
+              Shippo, and Stripe Integrations
+            </li>
+            <li>• Optimized website performance, user experience, and SEO</li>
+            <li>
+              • Troubleshot and resolved website issues in a timely manner to
+              maintain optimal website functionality and uptime.
+            </li>
+            <li>
+              • Implemented custom CMS solutions to meet clients’ unique
+              requirements, resulting in increased efficiency and user
+              engagement.
+            </li>
+            <li>• Constantly updated website with more items</li>
+          </ul>
         </div>
         <div className="mt-4">
           <div className="font-semibold">Freelancer – Gadya Media</div>
@@ -130,30 +146,117 @@ export default function Resumebody() {
             Website Development Dec 2022 – Present | Social Media Marketing Nov
             2021 - Present
           </div>
-          {/* Add your experience details here */}
-        </div>
-        <div className="mt-4">
-          <div className="font-semibold">Lifeguard – WALPOA</div>
-          <div className="text-sm text-gray-600">
-            Lifeguard | Dingmans Ferry, PA | June 2020 – Aug 2020 & June 2021 –
-            Aug 2021
-          </div>
-          {/* Add your experience details here */}
+          <ul>
+            <li>
+              • Assisted with WordPress website development for clientele.
+            </li>
+            <li>
+              • Created website and social media assets with Photoshop, Canva,
+              and Premiere
+            </li>
+            <li>
+              • Worked with WordPress CMS to meet clients’ unique requirements,
+              resulting in increased efficiency and user engagement.
+            </li>
+            <li>
+              • Created effective social media growth strategies and funnels.
+            </li>
+            <li>
+              • Scheduled content and recorded analytics for client accounts
+              using tools such as Buffer.
+            </li>
+          </ul>
         </div>
       </div>
       <div className="px-6 mt-6">
         <div className="font-bold text-xl">Projects</div>
         <div className="mt-2">
-          <div className="font-semibold">MyWebClass.org</div>
+          <div className="font-semibold">MyWebClass Project</div>
           <div className="text-sm text-gray-600">
-            Link: https://njit-wis.github.io/project-2-team-dennis-and-paul/
+            Link:{" "}
+            <a href="https://njit-wis.github.io/project-2-team-dennis-and-paul/">
+              MyWebClass
+            </a>
           </div>
           <div>
             Skills: Next.js, JavaScript, HTML, CSS, Bootstrap 5, Team
             Management, GitHub, Agile Project Management, Google Analytics,
             MailChimp, SEO
           </div>
-          {/* Add your project details here */}
+          <ul>
+            <li>
+              • Led a team of students to develop an online blog site using
+              Next.js and other technologies.
+            </li>
+            <li>
+              • Used Agile Project Management to plan out site by creating
+              initiatives, epics, user stories, and tasks.
+            </li>
+            <li>
+              • Developed landing page that follows a efficient marketing funnel
+            </li>
+            <li>
+              • Developed blog site that uses markdown files to create blogs.
+            </li>
+            <li>
+              • Used archetypes to create a consistent brand across all pages.
+            </li>
+            <li>
+              • Implemented Google Analytics Tracking to track user engagement
+              and conversions.
+            </li>
+            <li>
+              • Implemented internationalization using Google Translate API
+            </li>
+            <li>• Integrated MailChimp to collect user emails.</li>
+            <li>
+              • Complied with GDPR regulations and handled all user material
+              appropriately.
+            </li>
+            <li>
+              • Optimized website deployment and deployed website to GitHub
+              using GitHub
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="px-6 mt-6">
+        <div className="">
+          <div className="font-semibold">Dennis Boguslavskiy Personal Website</div>
+          <div className="text-sm text-gray-600">
+            Link:{" "}
+            <a href="">
+              Dennis Boguslavskiy Personal Site
+            </a>
+          </div>
+          <div>
+            Skills: Next.js, JavaScript, HTML, CSS, Tailwind CSS, DaiseyUI,
+            GitHub, Google Analytics, Firebase, Firestore, Vercel, SEO
+          </div>
+          <ul>
+            <li>
+              • Created a modern landing page with NextJs and Tailwind CSS and
+              DaiseyUI
+            </li>
+            <li>
+              • Implemented a contact form that accesses a firebase database
+            </li>
+            <li>
+              • Developed landing page that follows a efficient marketing funnel
+            </li>
+            <li>• Deployed website using Vercel</li>
+            <li>
+              • Implemented Google Analytics Tracking to track user engagement
+              and conversions.
+            </li>
+            <li>
+              • Implemented internationalization using Google Translate API
+            </li>
+            <li>
+              • Complied with GDPR regulations and handled all user material
+              appropriately.
+            </li>
+          </ul>
         </div>
       </div>
     </motion.div>

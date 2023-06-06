@@ -43,10 +43,10 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Hello! I am Dennis{" "}
+          Hello! I am Dennis a{" "}
           <Typewriter
             options={{
-              strings: ["a Student!", "a Software Engineer!", "a Web Developer!"],
+              strings: [" Student!", " Software Dev!", " Web Dev!"],
               autoStart: true,
               loop: true,
             }}
