@@ -59,14 +59,14 @@ const ContactForm = () => {
       <h2 className="text-6xl mb-4 text-white font-bold">Contact Me</h2>
       <form
         ref={formRef} 
-        className="flex flex-col border-black border-2 rounded-lg p-10 " 
+        className="flex flex-col border-black border-4  p-10 " 
         style={{width: '70%'}} 
         onSubmit={submitContact}
       >
         <motion.input
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="border-none bg-transparent p-2 mb-4 rounded-lg outline-none text-white placeholder-white"
+          className="bg-transparent p-2 mb-4 border-b-2 border-black border-opacity-30 text-white placeholder-white"
           type="text"
           name="name"
           placeholder="Your Name"
@@ -77,7 +77,7 @@ const ContactForm = () => {
         <motion.input
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="border-none bg-transparent p-2 mb-4 rounded-lg outline-none text-white placeholder-white"
+          className=" bg-transparent p-2 mb-4 border-b-2 border-black border-opacity-30 text-white placeholder-white"
           type="email"
           name="email"
           placeholder="Your Email"
@@ -88,7 +88,7 @@ const ContactForm = () => {
         <motion.textarea
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="border-none bg-transparent p-2 mb-4 rounded-lg outline-none text-white placeholder-white"
+          className="bg-transparent p-2 mb-4 border-b-2 border-black border-opacity-30 text-white placeholder-white"
           name="message"
           placeholder="Your Message"
           value={formState.message}

@@ -36,7 +36,7 @@ const Skills = () => {
       <div className="flex flex-wrap justify-center">
         {skills.map((skill, index) => (
           <motion.div
-            className="p-4 rounded bg-transparent text-white text-lg font-bold m-10 flex flex-col items-center"
+            className="p-4 rounded bg-transparent text-white text-lg font-bold m-8 flex flex-col items-center"
             key={index}
             style={{ opacity }}
             transition={{ delay: index * 0.1 }}
@@ -46,7 +46,7 @@ const Skills = () => {
               alt={`${skill.name} logo`}
               width={40}
               height={40}
-              className='pb-3'
+              className='pb-2'
             />
             <span>{skill.name}</span>
           </motion.div>
