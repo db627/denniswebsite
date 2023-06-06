@@ -15,11 +15,11 @@ const navItemVariants = {
 
 export default function Navigation() {
   return (
-    <nav id="top">
-      <motion.div className="navbar ">
+    <nav id="top" >
+      <motion.div className="navbar " >
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden" >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -94,7 +94,7 @@ export default function Navigation() {
           </motion.ul>
         </div>
         <div className="navbar-end">
-          <a className="btn text-teal-400">Resume</a>
+          <a className="btn text-teal-400" href="/resume">Resume</a>
         </div>
       </motion.div>
     </nav>

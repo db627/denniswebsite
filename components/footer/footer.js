@@ -24,7 +24,7 @@ export default function Footer() {
     >
       <div className='grid grid-cols-1 sm:grid-cols-3'>
         <div className='flex justify-center'>
-          <a href='/privacy-policy' className='hover:underline'>
+          <a href='/privacy_page' className='hover:underline'>
             Privacy Policy
           </a>
         </div>

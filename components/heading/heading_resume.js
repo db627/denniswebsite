@@ -3,23 +3,23 @@ import Head from "next/head";
 export default function Heading() {
   return (
     <Head>
-      <title>Dennis Boguslavskiy Personal Website</title>
+      <title>Dennis Boguslavskiy Resume</title>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       {/* Basic meta info */}
-      <meta name="keywords" content="Dennis Boguslavskiy Home Page" />
-      <meta name="author" content="Dennis Boguslavskiyt" />
+      <meta name="keywords" content="Dennis Boguslavskiy Resume Page" />
+      <meta name="author" content="Dennis Boguslavskiy" />
       <meta
         name="description"
-        content="The personal wesbite of Dennis Boguslavskiy. A student at the New Jersey Institute of Technology who is also a passionate web developer and social media marketer."
+        content="The resume of Dennis Boguslavskiy. Inside you can view my education, work experience, and skills."
       />
 
       {/* OpenGraph meta */}
-      <meta property="og:title" content="Dennis Boguslavskiy Home Page" />
+      <meta property="og:title" content="Dennis Boguslavskiy Resume Page" />
       <meta
         property="og:description"
-        content="The personal wesbite of Dennis Boguslavskiy. A student at the New Jersey Institute of Technology who is also a passionate web developer and social media marketer"
+        content="The resume of Dennis Boguslavskiy. Inside you can view my education, work experience, and skills"
       />
       <meta property="og:url" content="[insert URL here]" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
