@@ -56,17 +56,17 @@ const ContactForm = () => {
       className="flex flex-col items-center justify-center bg-black bg-opacity-20 p-10"
       id="contact"
     >
-      <h2 className="text-6xl mb-4 text-white font-bold">Contact Me</h2>
+      <h2 className="text-6xl mb-4 text-center text-teal-300 font-bold">Contact Me</h2>
       <form
         ref={formRef} 
-        className="flex flex-col border-teal-400 border-opacity-40 border-4  p-10 " 
+        className="flex flex-col " 
         style={{width: '90%'}} 
         onSubmit={submitContact}
       >
         <motion.input
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="bg-transparent p-2 mb-4 border-b-2 border-black border-opacity-30 text-white placeholder-white"
+          className="bg-gray-400 bg-opacity-10 p-2 pl-5 mb-4 rounded-2xl text-white"
           type="text"
           name="name"
           placeholder="Your Name"
@@ -77,7 +77,7 @@ const ContactForm = () => {
         <motion.input
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className=" bg-transparent p-2 mb-4 border-b-2 border-black border-opacity-30 text-white placeholder-white"
+          className=" bg-gray-400 bg-opacity-10 p-2 pl-5 mb-4 rounded-2xl text-white"
           type="email"
           name="email"
           placeholder="Your Email"
@@ -88,7 +88,7 @@ const ContactForm = () => {
         <motion.textarea
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="bg-transparent p-2 mb-4 border-b-2 border-black border-opacity-30 text-white placeholder-white"
+          className="bg-gray-400 bg-opacity-10 p-2 pl-5 mb-4 rounded-2xl text-white"
           name="message"
           placeholder="Your Message"
           value={formState.message}
@@ -99,7 +99,7 @@ const ContactForm = () => {
           whileHover={{ scale: 1.05, backgroundColor: "#008080" }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.3 }}
-          className="border-none bg-teal-400 p-2 rounded-lg text-white font-bold"
+          className="border-none bg-teal-400 bg-opacity-60 p-2 rounded-lg text-white font-bold"
           type="submit"
         >
           Submit
