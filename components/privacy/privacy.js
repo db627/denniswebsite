@@ -53,7 +53,7 @@ export default function Privacybody() {
             <h1 className="text-5xl">Privacy Policy</h1>
             <section className="">
               <p>
-                We at mywebclass.org are committed to protecting your privacy.
+                Dennis Boguslavskiy is committed to protecting your privacy.
                 This Privacy Policy explains what information we collect from
                 you when you visit our website, how we use it, and how we
                 protect it. By using our website, you agree to the terms of this
@@ -154,7 +154,7 @@ export default function Privacybody() {
                 <h2>Contact us</h2>
                 <p>
                   If you have any questions about this Privacy Policy, please
-                  contact us at [contact email address].
+                  contact us at our <a href="/#contact" className="font-bold" >Contact Form!</a>
                 </p>
               </section>
             </section>
