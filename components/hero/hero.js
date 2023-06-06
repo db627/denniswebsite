@@ -33,12 +33,12 @@ const HeroSection = () => {
   return (
     <section
       className="flex items-center justify-center p-8"
-      style={{ height: "30em" }}
+      style={{ height: "50em" }}
     >
 
       <div className="space-y-6 m-5 p-5">
         <motion.h1
-          className="text-6xl font-bold text-teal-400"
+          className="text-7xl font-bold text-teal-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}

@@ -57,7 +57,7 @@ export default function About() {
           <Image
             src={Dennis}
             alt="Dennis Boguslavskiy Image"
-            className="border-4 border-white rounded-full overflow-hidden shadow-xl"
+            className="border-4 border-teal-400 border-opacity-80 rounded-full overflow-hidden shadow-xl"
             width={400}
             height={400}
             objectFit="cover"

@@ -59,8 +59,8 @@ const ContactForm = () => {
       <h2 className="text-6xl mb-4 text-white font-bold">Contact Me</h2>
       <form
         ref={formRef} 
-        className="flex flex-col border-black border-4  p-10 " 
-        style={{width: '70%'}} 
+        className="flex flex-col border-teal-400 border-opacity-40 border-4  p-10 " 
+        style={{width: '90%'}} 
         onSubmit={submitContact}
       >
         <motion.input
