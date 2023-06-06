@@ -1,7 +1,7 @@
-export default function Blog(){
-    return(
-        <div>
-            <h1>Hello World</h1>
-        </div>
-    )
+import Layout from "../components/layout_blog";
+
+export default function Privacy() {
+  return <Layout>
+    
+  </Layout>;
 }
