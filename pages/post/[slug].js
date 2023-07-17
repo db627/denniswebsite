@@ -1,5 +1,5 @@
 // [slug].tsx
-
+/*
 import groq from "groq";
 import imageUrlBuilder from "@sanity/image-url";
 import { PortableText } from "@portabletext/react";
@@ -88,3 +88,4 @@ export async function getStaticProps(context) {
   };
 }
 export default Post;
+*/

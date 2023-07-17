@@ -1,3 +1,4 @@
+/*
 import { useRouter } from "next/router";
 
 const Post = () => {
@@ -13,3 +14,4 @@ const Post = () => {
 };
 
 export default Post;
+*/
