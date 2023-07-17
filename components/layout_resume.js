@@ -1,5 +1,5 @@
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
-import Navigation from './navigation/navigation';
+import Navigation from './navigation/navigationresume';
 import Heading from './heading/heading_resume';
 import Footer from './footer/footer';
 import Resumebody from './resumebody/resumebody';

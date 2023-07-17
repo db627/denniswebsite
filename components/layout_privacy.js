@@ -1,5 +1,5 @@
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
-import Navigation from './navigation/navigation';
+import Navigation from './navigation/navigation2';
 import Heading from './heading/heading_privacy';
 import Footer from './footer/footer';
 import Privacybody from './privacy/privacy';

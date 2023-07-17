@@ -35,7 +35,7 @@ export default function Resumebody() {
         </p>
       </div>
       <div className="px-6 mt-6 border-2 border-teal-300 rounded-lg p-5">
-        <div className="font-bold text-xl">Skills</div>
+        <div className="font-bold text-xl" id="skills">Skills</div>
         <ul className="mt-2 space-y-2">
           {/* Add your skills here */}
           <li className="flex justify-between items-center">
@@ -95,7 +95,7 @@ export default function Resumebody() {
         </ul>
       </div>
       <div className="px-6 mt-6">
-        <div className="font-bold text-xl">Education</div>
+        <div className="font-bold text-xl" id="education">Education</div>
         <div className="mt-2">
           <div className="font-semibold">
             New Jersey Institute of Technology
@@ -116,7 +116,7 @@ export default function Resumebody() {
         </div>
       </div>
       <div className="px-6 mt-6 border-2 border-teal-300 rounded-lg pt-5 pb-5">
-        <div className="font-bold text-xl">Experience</div>
+        <div className="font-bold text-xl" id="experience">Experience</div>
         <div className="mt-2">
           <div className="font-semibold">Contractor – Stay Healthy Inc</div>
           <div className="text-sm text-gray-600">
@@ -169,7 +169,7 @@ export default function Resumebody() {
         </div>
       </div>
       <div className="px-6 mt-6">
-        <div className="font-bold text-xl">Projects</div>
+        <div className="font-bold text-xl" id="#projects">Projects</div>
         <div className="mt-2">
           <div className="font-semibold">MyWebClass Project</div>
           <div className="text-sm text-gray-600">
