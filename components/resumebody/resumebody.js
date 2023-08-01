@@ -118,6 +118,26 @@ export default function Resumebody() {
       <div className="px-6 mt-6 border-2 border-teal-300 rounded-lg pt-5 pb-5">
         <div className="font-bold text-xl" id="experience">Experience</div>
         <div className="mt-2">
+          <div className="font-semibold">Inventory Control Intern - Merola Tile</div>
+          <div className="text-sm text-gray-600">
+            Inventory Control Intern | Manalapan, NJ | July 11, 2023 - Present
+          </div>
+          <ul>
+            <li>
+              • Organize daily cycle count using excel and warehouse management system
+            </li>
+            <li>• Research item logs to determine cause of inventory discrepancies</li>
+            <li>
+              • Report on daily cycle count.
+            </li>
+            <li>
+              • Data entry of inventory adjustments (approve/reject and disco items).
+            </li>
+            <li>•  Assist with special projects as needed</li>
+            <li><strong>Skills: </strong> Data Entry, Data Analysis, Communication, Microsoft Excel, Microsoft Office, Time Management</li>
+          </ul>
+        </div>
+        <div className="mt-2">
           <div className="font-semibold">Contractor – Stay Healthy Inc</div>
           <div className="text-sm text-gray-600">
             Webflow Web Developer | April 26, 2023 - Present
