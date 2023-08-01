@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
+  purge: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       backgroundImage: {
@@ -20,7 +21,7 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
-            // Here you can add your dark theme configurations
+      // Here you can add your dark theme configurations
       mytheme: {
         colors: {
           primary: "#051821", // Off-white to give a softer look
@@ -36,8 +37,10 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  variants: {},
+  plugins: [require('daisyui')],
   daisyui: {
-    themes: ["mytheme"],
+    styled: true,
+    themes: ['mytheme'],
   },
 };

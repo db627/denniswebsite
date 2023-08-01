@@ -62,18 +62,18 @@ export default function Navigation() {
         </div>
         <div className="navbar-center hidden lg:flex">
           <motion.ul
-            className="menu menu-horizontal px-1 text-teal-400"
+            className="menu menu-horizontal px-1 text-teal-600"
             variants={navItemVariants}
             initial="hidden"
             animate="show"
           >
-            <li>
+            <li className="hover:underline">
               <a href="#about">About Me</a>
             </li>
-            <li>
+            <li className="hover:underline">
               <a href="/blog">Blog</a>
             </li>
-            <li>
+            <li className="hover:underline">
               <a href="#contact">Contact</a>
             </li>
           </motion.ul>
