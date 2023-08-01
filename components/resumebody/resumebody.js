@@ -3,24 +3,25 @@ import { motion } from "framer-motion";
 export default function Resumebody() {
   return (
     <motion.div
-      className="flex flex-col w-full p-8 mx-auto bg-black bg-opacity-20 rounded-lg shadow-md font-mono text-teal-400"
+      className="flex flex-col w-full p-8 mx-auto bg-white bg-opacity-90 shadow-md font-mono text-black-400"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2 }}
     >
-      <div className="flex flex-col justify-between w-full mt-6 space-y-6 sm:flex-row sm:space-y-0 border-2 border-teal-300 rounded-lg p-3">
+      <div className="flex flex-col justify-between w-full mt-6 space-y-6 sm:flex-row sm:space-y-0 border-2 border-black shadow-lg rounded-lg p-3">
         <div className="flex items-center justify-start text-xl font-bold">
           <span className="ml-1">Dennis Boguslavskiy</span>
         </div>
         <div className="flex flex-col items-start justify-start">
-          <span className="pr-3">dennisboguslavskiy@gmail.com</span>
+          <span className="pr-3">dennisboguslavskiy@gmail.com
+          </span>
           <span>
-            <a href="https://www.linkedin.com/in/dennis-boguslavskiy/">
+            <a href="https://www.linkedin.com/in/dennis-boguslavskiy/" className="hover:text-lg hover:font-semibold focus:text-lg focus:font-semibold transition-all duration-300">
               LinkedIn
             </a>
           </span>
           <span>
-            <a href="https://github.com/db627">GitHub</a>
+            <a href="https://github.com/db627" className="hover:text-lg hover:font-semibold focus:text-lg focus:font-semibold transition-all duration-300">GitHub</a>
           </span>
         </div>
       </div>
@@ -34,13 +35,13 @@ export default function Resumebody() {
           personal and team growth.
         </p>
       </div>
-      <div className="px-6 mt-6 border-2 border-teal-300 rounded-lg p-5">
+      <div className="px-6 mt-6 border-2 border-black shadow-lg rounded-lg p-5">
         <div className="font-bold text-xl" id="skills">Skills</div>
         <ul className="mt-2 space-y-2">
           {/* Add your skills here */}
           <li className="flex justify-between items-center">
             <span>Next.JS</span>
-            <div className="w-64 h-2 bg-gray-600 rounded">
+            <div className="w-64 bg-gray-600 rounded h-1.5">
               <div
                 className="h-full bg-teal-400 rounded"
                 style={{ width: "70%" }}
@@ -49,43 +50,40 @@ export default function Resumebody() {
           </li>
           <li className="flex justify-between items-center">
             <span>React</span>
-            <div className="w-56 h-2 bg-gray-600 rounded">
+            <div className="w-64 bg-gray-600 rounded h-1.5">
               <div
-                className="h-full bg-teal-400 rounded"
-                style={{ width: "30%" }}
+                className="h-full bg-teal-400 rounded w-1/2"
               ></div>
             </div>
           </li>
-          <li className="flex justify-between items-center">
+          <li className="flex justify-between items-center" >
             <span>HTML, CSS, JavaScript</span>
-            <div className="w-80 h-3 bg-gray-600 rounded">
+            <div className="w-64 bg-gray-600 rounded h-1.5">
               <div
-                className="h-full bg-teal-400 rounded"
-                style={{ width: "90%" }}
+                className="h-full bg-teal-400 rounded transition-all duration-300 w-4/5"
+                
               ></div>
             </div>
           </li>
           <li className="flex justify-between items-center">
             <span>Python</span>
-            <div className="w-52 h-2 bg-gray-600 rounded">
+            <div className="w-64 h-1.5 bg-gray-600 rounded" style={{height:".5 em"}}>
               <div
-                className="h-full bg-teal-400 rounded"
-                style={{ width: "70%" }}
+                className="h-full bg-teal-400 rounded w-3/4"
               ></div>
             </div>
           </li>
           <li className="flex justify-between items-center">
             <span>Java</span>
-            <div className="w-48 h-2 bg-gray-600 rounded">
+            <div className="w-64 h-1.5 bg-gray-600 rounded">
               <div
-                className="h-full bg-teal-400 rounded"
-                style={{ width: "50%" }}
+                className="h-full bg-teal-400 rounded w-1/2"
               ></div>
             </div>
           </li>
           <li className="flex justify-between items-center">
             <span>Google Analytics, MailChimp, Social Media Marketing</span>
-            <div className="w-72 h-3 bg-gray-600 rounded">
+            <div className="w-64 h-1.5 bg-gray-600 rounded">
               <div
                 className="h-full bg-teal-400 rounded"
                 style={{ width: "90%" }}
@@ -115,8 +113,28 @@ export default function Resumebody() {
           </div>
         </div>
       </div>
-      <div className="px-6 mt-6 border-2 border-teal-300 rounded-lg pt-5 pb-5">
+      <div className="px-6 mt-6 border-2 border-black rounded-lg shadow-lg pt-5 pb-5">
         <div className="font-bold text-xl" id="experience">Experience</div>
+        <div className="mt-2">
+          <div className="font-semibold">Inventory Control Intern - Merola Tile</div>
+          <div className="text-sm text-gray-600">
+            Inventory Control Intern | Manalapan, NJ | July 11, 2023 - Present
+          </div>
+          <ul>
+            <li>
+              • Organize daily cycle count using excel and warehouse management system
+            </li>
+            <li>• Research item logs to determine cause of inventory discrepancies</li>
+            <li>
+              • Report on daily cycle count.
+            </li>
+            <li>
+              • Data entry of inventory adjustments (approve/reject and disco items).
+            </li>
+            <li>•  Assist with special projects as needed</li>
+            <li><strong>Skills: </strong> Data Entry, Data Analysis, Communication, Microsoft Excel, Microsoft Office, Time Management</li>
+          </ul>
+        </div>
         <div className="mt-2">
           <div className="font-semibold">Contractor – Stay Healthy Inc</div>
           <div className="text-sm text-gray-600">
@@ -138,8 +156,10 @@ export default function Resumebody() {
               engagement.
             </li>
             <li>• Constantly updated website with more items</li>
+            <li><strong>Skills: </strong> Webflow, CSS, HTML, SEO, Stripe Integration, Testing</li>
           </ul>
         </div>
+        
         <div className="mt-4">
           <div className="font-semibold">Freelancer – Gadya Media</div>
           <div className="text-sm text-gray-600">
@@ -165,6 +185,7 @@ export default function Resumebody() {
               • Scheduled content and recorded analytics for client accounts
               using tools such as Buffer.
             </li>
+            <li><strong>Skills: </strong> HTML, CSS, WordPress, Adobe Creative Cloud, SEO, Social Media Marketing, Social Media Management</li>
           </ul>
         </div>
       </div>
