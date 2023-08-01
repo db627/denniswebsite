@@ -19,13 +19,13 @@ export default function Navigation() {
       <motion.div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn lg:hidden border-none hover:p-3 hover:border-dashed transform-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="white"
+                stroke="teal"
               >
                 <path
                   strokeLinecap="round"
@@ -37,24 +37,24 @@ export default function Navigation() {
             </label>
             <motion.ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-black bg-opacity-90 rounded-box w-52 text-teal-400"
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-teal bg-opacity-60 rounded-box w-52 text-teal-600"
               variants={navItemVariants}
               initial="hidden"
               animate="show"
             >
-              <li>
+              <li className="hover:underline">
                 <a href="/#about">About</a>
               </li>
-              <li>
+              <li className="hover:underline">
                 <a href="/blog">Blog</a>
               </li>
-              <li href="/#contact">
+              <li className="hover:underline" href="/#contact">
                 <a>Contact</a>
               </li>
             </motion.ul>
           </div>
           <a
-            className="btn btn-ghost normal-case text-xl pr-3 text-teal-400"
+            className="btn border-none hover:border-dashed hover:px-2 focus:border-dashed focus:px-2 duration-300 transition-all normal-case text-md pr-3 text-teal-600"
             href="/"
           >
             Dennis B
@@ -79,7 +79,7 @@ export default function Navigation() {
           </motion.ul>
         </div>
         <div className="navbar-end ">
-          <a className="btn text-teal-400 ml-10" href="/resume">
+          <a className="btn text-teal-600 text-md ml-10 border-none hover:border-dashed hover:px-2 focus:border-dashed focus:px-2 duration-300 transition-all" href="/resume">
             Resume
           </a>
         </div>
