@@ -9,7 +9,7 @@ export default function Layout({ children }) {
   const translateY = useTransform(scrollYProgress, [0, 1], ['100vh', '0vh']);
 
   return (
-    <div className="bg-gradient-to-br from-color1 via-color2 to-color3" >
+    <div className="bg-white" >
     <Heading />
       <Navigation />
       <Resumebody/>
@@ -20,3 +20,4 @@ export default function Layout({ children }) {
     </div>
   );
 }
+//bg-gradient-to-br from-color1 via-color2 to-color3

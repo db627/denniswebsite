@@ -20,11 +20,12 @@ export default function Footer() {
     <footer
       variants={footerVariants}
       initial='hidden'
-      className='grid grid-cols-1 gap-4 p-4 text-white'
+      className='grid grid-cols-1 gap-4 p-4 text-white bg-black '
+      style={{height:'30vh'}}
     >
       <div className='grid grid-cols-1 sm:grid-cols-3'>
         <div className='flex justify-center'>
-          <a href='/privacy_page' className='hover:underline'>
+          <a href='/privacy_page' className='hover:underline transition-all duration-300 '>
             Privacy Policy
           </a>
         </div>
