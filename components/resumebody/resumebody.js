@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Resumebody() {
   return (
     <motion.div
-      className="flex flex-col w-full p-8 mx-auto bg-white bg-opacity-90 shadow-md font-mono text-black-400"
+      className="flex flex-col w-full p-8 mx-auto bg-white bg-opacity-20 shadow-md font-mono text-black-400"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2 }}

@@ -17,7 +17,6 @@ export default function Navigation() {
   return (
     <nav id="top">
       <motion.div className="navbar">
-        <div className="shadow-lg navbar p-0">
         <div className="navbar-start ">
           <div className="dropdown">
             <label tabIndex={0} className="btn border-none focus:border-dashed focus:border-teal-600 focus:p-3 hover:border-dashed hover:border-teal-600 hover:p-3 transition-all duation-300 lg:hidden">
@@ -89,7 +88,6 @@ export default function Navigation() {
           <a className="btn text-teal-600 ml-10 border-none hover:rounded-xl hover:text-md hover:border-dashed transition-all duration-300" href="/resume">
             Resume
           </a>
-        </div>
         </div>
       </motion.div>
     </nav>
