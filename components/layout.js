@@ -4,6 +4,7 @@ import About from './about/about';
 import Hero from './hero/hero';
 import Footer from './footer/footer';
 import Skills from './skills/skills';
+import Projects from './skills/projects';
 import Form from './form/form'
 import Heading from './heading/heading';
 
@@ -12,10 +13,11 @@ export default function Layout({ children }) {
   const translateY = useTransform(scrollYProgress, [0, 1], ['100vh', '0vh']);
 
   return (
-    <div className="bg-gradient-to-t from-white to-teal-500">
+    <div className="bg-zinc-800">
       <Heading />
       <Navigation />
       <Hero />
+      <Projects />
       <About />
       <Skills />
       <motion.div style={{ y: translateY }}>{children}</motion.div>
@@ -24,3 +26,4 @@ export default function Layout({ children }) {
     </div>
   );
 }
+//bg-gradient-to-t from-white to-teal-500

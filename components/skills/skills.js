@@ -34,23 +34,29 @@ const Skills = () => {
     <motion.div
       ref={ref}
       className=" py-16 text-white flex flex-col items-center"
-      style={{ minHeight: '200px'}}
+      style={{ minHeight: "200px" }}
       transition={{ duration: 2 }}
       variants={skillsVariants}
       initial="hidden"
-      animate={inView ? 'show' : 'hidden'}
+      animate={inView ? "show" : "hidden"}
     >
-      <h2 className="text-4xl font-bold mb-8 underline text-teal-900">Skills</h2>
-      <div className="flex flex-wrap justify-center space-y-4">
+      <h2 className="text-4xl font-bold mb-8 underline text-zinc-100 ">
+        Skills
+      </h2>
+      <div className="flex flex-wrap justify-center space-y-4 ">
         {skills.map((skill, index) => (
           <motion.div
-            className="p-4 rounded bg-transparent text-white text-lg font-bold m-8 flex flex-col items-center w-64"
+            className="p-4 rounded text-zinc-100 text-lg font-bold m-3 flex flex-col items-center w-64 rounded bg-zinc-700 shadow-2xl mx-3 mobile:mx-10 rounded-2xl "
+            style={{ height: "10em", width: "10em" }}
             key={index}
             whileHover={{ scale: 1.1 }}
           >
-            <span className='pb-2 text-teal-800'>{skill.name}</span>
+            <span className="pb-2 text-zinc-100">{skill.name}</span>
             <div className="w-full h-3 bg-white rounded">
-              <div style={{ width: `${skill.level}%` }} className="h-full bg-teal-500 rounded"></div>
+              <div
+                style={{ width: `${skill.level}%` }}
+                className="h-full bg-black rounded"
+              ></div>
             </div>
           </motion.div>
         ))}

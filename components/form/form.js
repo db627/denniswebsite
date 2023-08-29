@@ -68,13 +68,13 @@ const ContactForm = () => {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center justify-center bg-gray-400 bg-opacity-10 p-20 text-white"
+      className="flex flex-col items-center justify-center  p-20 text-white"
       id="contact"
       variants={contactFormVariants}
       initial="hidden"
       animate={inView ? 'show' : 'hidden'}
     >
-      <h2 className="text-4xl md:text-6xl text-teal-600 underline font-semibold mb-8 text-center">Contact Me</h2>
+      <h2 className="text-4xl md:text-6xl text-zinc-100 underline font-semibold mb-8 text-center">Contact Me</h2>
       <form
         ref={formRef} 
         className="flex flex-col space-y-4" 
@@ -114,16 +114,16 @@ const ContactForm = () => {
           required
         />
         <motion.button
-          whileHover={{ scale: 1.05, backgroundColor: "#008080" }}
+          whileHover={{ scale: 1.05, backgroundColor: "#4FD1C5" }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.3 }}
-          className="p-4 bg-teal-600 rounded-lg font-bold"
+          className="p-4 bg-zinc-800 rounded-lg font-bold"
           type="submit"
         >
           Submit
         </motion.button>
       </form>
-      {userMessage && <div className="mt-6 text-teal-300 font-bold">{userMessage}</div>}
+      {userMessage && <div className="mt-6 text-white font-bold">{userMessage}</div>}
     </motion.div>
   );
 };
