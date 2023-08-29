@@ -64,7 +64,7 @@ const HeroSection = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contact Me</a>
           </motion.button>
         </div>
       </div>
