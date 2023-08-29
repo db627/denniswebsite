@@ -26,7 +26,7 @@ const ScrollspyNav = ({ ids }) => {
         {ids.map((id) => (
           <a
             key={id}
-            className={`px-2 py-1 text-white hover:bg-teal-600 transition-colors rounded-lg duration-200 ${id === activeId ? "text-blue-500 font-bold" : "text-black"}`}
+            className={`px-2 py-1 text-black hover:bg-teal-600 transition-colors rounded-lg duration-200 ${id === activeId ? "text-blue-500 font-bold" : "text-black"}`}
             href={`#${id}`}
           >
             {id}

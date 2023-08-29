@@ -35,28 +35,30 @@ export default function About() {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center text-white p-16 bg-gray-900 bg-opacity-10 mx-auto w-full"
+      className="flex flex-col items-center text-white p-16 border-x-2 mx-auto w-full "
       id="about"
       variants={aboutVariants}
       initial="hidden"
-      animate={inView ? 'show' : 'hidden'}
+      animate={inView ? "show" : "hidden"}
     >
-      <motion.h1
-        className="text-4xl md:text-6xl text-teal-600 font-semibold mb-8 tracking-wide"
-      >
+      <motion.h1 className="text-4xl md:text-6xl text-black font-semibold mb-8 tracking-wide">
         About Me:
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 items-center max-w-screen-lg mx-auto p-6">
-        <motion.div
-          className="prose prose-lg md:prose-xl text-white"
-        >
-          <motion.ul className="list-disc">
-            <li>Computing and Business student at the New Jersey Institute of Technology</li>
+        <motion.div className="prose prose-lg md:prose-xl text-white">
+          <motion.ul className="list-disc text-black font-semibold">
+            <li>
+              Computing and Business student at the New Jersey Institute of
+              Technology
+            </li>
             <li>Minor in Mobile and Web Development</li>
             <li>Freelance website developer and social media marketer</li>
             <li>Applies academic insights to real-world projects</li>
             <li>Interested in photography and spending time with loved ones</li>
-            <li>Emphasizes a data-driven approach and teamwork in professional endeavors</li>
+            <li>
+              Emphasizes a data-driven approach and teamwork in professional
+              endeavors
+            </li>
             <li>Strives to foster growth and innovation in all projects</li>
           </motion.ul>
         </motion.div>

@@ -40,7 +40,7 @@ const Skills = () => {
       initial="hidden"
       animate={inView ? 'show' : 'hidden'}
     >
-      <h2 className="text-4xl font-bold mb-8 underline text-teal-200">Skills</h2>
+      <h2 className="text-4xl font-bold mb-8 underline text-teal-900">Skills</h2>
       <div className="flex flex-wrap justify-center space-y-4">
         {skills.map((skill, index) => (
           <motion.div
@@ -48,8 +48,8 @@ const Skills = () => {
             key={index}
             whileHover={{ scale: 1.1 }}
           >
-            <span className='pb-2'>{skill.name}</span>
-            <div className="w-full h-3 bg-teal-200 rounded">
+            <span className='pb-2 text-teal-800'>{skill.name}</span>
+            <div className="w-full h-3 bg-white rounded">
               <div style={{ width: `${skill.level}%` }} className="h-full bg-teal-500 rounded"></div>
             </div>
           </motion.div>

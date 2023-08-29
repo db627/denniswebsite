@@ -19,38 +19,55 @@ export default function Footer() {
   return (
     <footer
       variants={footerVariants}
-      initial='hidden'
-      className='grid grid-cols-1 gap-4 p-4 text-white bg-black '
-      style={{height:'30vh'}}
+      initial="hidden"
+      className="grid grid-cols-1 gap-4 p-4 text-white bg-black "
+      style={{ height: "30vh" }}
     >
-      <div className='grid grid-cols-1 sm:grid-cols-3'>
-        <div className='flex justify-center'>
-          <a href='/privacy_page' className='hover:underline transition-all duration-300 '>
+      <div className="grid grid-cols-1 sm:grid-cols-3">
+        <div className="flex justify-center">
+          <a
+            href="/privacy_page"
+            className="hover:underline transition-all duration-300 "
+          >
             Privacy Policy
           </a>
         </div>
-        <div className='flex justify-center'>
-          <a href='https://www.linkedin.com/in/dennis-boguslavskiy/' className='hover:underline' target='_blank' rel='noopener noreferrer'>
+        <div className="flex justify-center">
+          <a
+            href="https://www.linkedin.com/in/dennis-boguslavskiy/"
+            className="hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
         </div>
-        <div className='flex justify-center'>
-          <a href='#top' className='hover:underline'>
+        <div className="flex justify-center">
+          <a href="#top" className="hover:underline">
             Back to Top
           </a>
         </div>
       </div>
-      <div className='flex gap-4 mt-4 items-center justify-center'>
+      <div className="flex gap-4 mt-4 items-center justify-center">
         {/* Replace # with your actual social media links */}
-        <a href='https://instagram.com/dennisbogus' className='hover:underline justify-center' target='_blank'>
+        <a
+          href="https://instagram.com/dennisbogus"
+          className="hover:underline justify-center"
+          target="_blank"
+        >
           {/* Replace this with your actual social media icon */}
-          <Image src={Instagram} alt="Instagram" width={20}/>
+          <Image src={Instagram} alt="Instagram" width={20} />
         </a>
-        <a href='https://github.com/db627' className='hover:underline justify-center ' target='_blank'>
+        <a
+          href="https://github.com/db627"
+          className="hover:underline justify-center "
+          target="_blank"
+        >
           {/* Replace this with your actual social media icon */}
-          <Image src={Github} alt="GitHub" width={20}/>
+          <Image src={Github} alt="GitHub" width={20} />
         </a>
       </div>
+      <p className="text-white text-center">&copy; Dennnis Boguslavskiy</p>
     </footer>
   );
 }

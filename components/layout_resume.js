@@ -10,7 +10,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="bg-gradient-to-br from-white to-teal-500" >
-    <Heading />
+      <Heading />
       <Navigation />
       <Resumebody/>
       <motion.div style={{ y: translateY }}>
