@@ -32,13 +32,12 @@ const HeroSection = () => {
   */
   return (
     <section
-      className="flex items-center justify-center p-8"
+      className="flex items-center justify-center p-8 "
       style={{ height: "50em" }}
     >
-
       <div className="space-y-6 m-5 p-5">
         <motion.h1
-          className="text-7xl font-bold text-teal-400"
+          className="text-7xl font-bold text-teal-900"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -54,14 +53,14 @@ const HeroSection = () => {
         </motion.h1>
         <div className="flex space-x-4">
           <motion.button
-            className="btn btn-primary text-teal-600 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-teal-600 hover:text-white"
+            className="btn btn-primary text-teal-900 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-teal-600 hover:text-white focus:bg-teal-600 focus:text-white"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             <a href="#about">About Me</a>
           </motion.button>
           <motion.button
-            className="btn btn-secondary text-slate-500 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-slate-500 hover:text-white"
+            className="btn btn-secondary text-slate-700 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-slate-500 hover:text-white focus:bg-slate-500 focus:text-white duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

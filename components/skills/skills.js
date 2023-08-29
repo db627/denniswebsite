@@ -1,25 +1,15 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 
-import Bootstrap from "/public/bootstrap.png";
-import CSS from "/public/css.png";
-import Framer from "/public/framermotion.png";
-import HTML from "/public/html.png";
-import Javascript from "/public/js.png";
-import Next from "/public/nextjs.png";
-import Tailwind from "/public/tailwind.png";
-import Python from "/public/python.png"
-
 const skills = [
-  { name: "HTML", logo: HTML },
-  { name: "CSS", logo: CSS },
-  { name: "JavaScript", logo: Javascript },
-  { name: "React", logo: Framer },
-  { name: "Next.js", logo: Next },
-  { name: "Tailwind CSS", logo: Tailwind },
-  { name: "Bootstrap", logo: Bootstrap },
-  { name: "Python", logo: Python },
+  { name: "HTML/CSS", level: 80 },
+  { name: "Java", level: 60 },
+  { name: "JavaScript", level: 40 },
+  { name: "React", level: 55 },
+  { name: "Next.js", level: 75 },
+  { name: "Tailwind CSS", level: 90 },
+  { name: "Bootstrap", level: 90 },
+  { name: "Python", level: 70 },
 ];
 
 const skillsVariants = {
@@ -50,22 +40,18 @@ const Skills = () => {
       initial="hidden"
       animate={inView ? 'show' : 'hidden'}
     >
-      <h2 className="text-4xl font-bold mb-8">Skills</h2>
-      <div className="flex flex-wrap justify-center">
+      <h2 className="text-4xl font-bold mb-8 underline text-teal-900">Skills</h2>
+      <div className="flex flex-wrap justify-center space-y-4">
         {skills.map((skill, index) => (
           <motion.div
-            className="p-4 rounded bg-transparent text-white text-lg font-bold m-8 flex flex-col items-center"
+            className="p-4 rounded bg-transparent text-white text-lg font-bold m-8 flex flex-col items-center w-64"
             key={index}
             whileHover={{ scale: 1.1 }}
           >
-            <Image
-              src={skill.logo}
-              alt={`${skill.name} logo`}
-              width={40}
-              height={40}
-              className='pb-2'
-            />
-            <span>{skill.name}</span>
+            <span className='pb-2 text-teal-800'>{skill.name}</span>
+            <div className="w-full h-3 bg-white rounded">
+              <div style={{ width: `${skill.level}%` }} className="h-full bg-teal-500 rounded"></div>
+            </div>
           </motion.div>
         ))}
       </div>

@@ -19,7 +19,7 @@ export default function Navigation() {
       <motion.div className="navbar ">
         <div className="navbar-start text-center">
           <a
-            className="btn btn-ghost normal-case text-xl pr-3 text-teal-400 text-center"
+            className="btn btn-ghost normal-case text-xl pr-3 text-teal-900 text-center"
             href="/"
           >
             Dennis B

@@ -18,9 +18,9 @@ export default function Privacybody() {
         <script async src={``} />
 
       </Head>
-      <div className="p-10 bg-black bg-opacity-20" id="privacypage">
+      <div className="p-10 " id="privacypage">
         <h1
-          className="font-bold border-b text-dark pt-20 text-6xl ml-10 "
+          className="font-bold border-b text-black pt-20 text-6xl ml-10 "
           id="title"
         >
           Privacy Policy
@@ -36,10 +36,10 @@ export default function Privacybody() {
             </div>
           </nav>
 
-          <main className=" ml-10">
-            <div className=" mb-3 mt-5 text-white">
+          <main className=" ml-10 text-black">
+            <div className=" mb-3 mt-5 text-black">
               By{" "}
-              <a href="#" className="text-white">
+              <a href="#" className="text-black">
                 Dennis Boguslavskiy
               </a>
               <span className="text-gray-500 ml-3">

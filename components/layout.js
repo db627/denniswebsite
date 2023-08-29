@@ -12,17 +12,15 @@ export default function Layout({ children }) {
   const translateY = useTransform(scrollYProgress, [0, 1], ['100vh', '0vh']);
 
   return (
-    <div className="bg-gradient-to-br from-color1 via-color2 to-color3">
+    <div className="bg-gradient-to-t from-white to-teal-500">
       <Heading />
       <Navigation />
       <Hero />
       <About />
       <Skills />
-      <motion.div style={{ y: translateY }}>
-        {children}
-      </motion.div>
+      <motion.div style={{ y: translateY }}>{children}</motion.div>
       <Form />
-      <Footer /> 
+      <Footer />
     </div>
   );
 }
