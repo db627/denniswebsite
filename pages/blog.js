@@ -4,6 +4,7 @@ import Navigation from "@/components/navigation/navigation2"
 export default function Blog(){
   return (
     <div className="">
+      
       <body className="bg-gradient-to-br from-color1 via-color2 to-color3 " style={{height: "100vh"}}>
         <Navigation />
         <div className="text-center">
@@ -14,3 +15,5 @@ export default function Blog(){
     </div>
   );
 }
+
+// bg-gradient-to-br from-color1 via-color2 to-color3 

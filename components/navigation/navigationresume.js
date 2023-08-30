@@ -37,7 +37,7 @@ export default function Navigation() {
             </label>
             <motion.ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-black bg-opacity-90 rounded-box w-52 text-teal-600 "
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-black bg-opacity-90 rounded-box w-52 text-zinc-100 "
               variants={navItemVariants}
               initial="hidden"
               animate="show"
@@ -57,7 +57,7 @@ export default function Navigation() {
             </motion.ul>
           </div>
           <a
-            className="btn btn-ghost rounded-none normal-case text-lg pr-3 text-teal-600 hover:rounded-xl hover:text-md hover:border-dashed transition-all duration-300"
+            className="btn btn-ghost rounded-none normal-case text-lg pr-3 text-zinc-100 hover:rounded-xl hover:text-md hover:border-dashed transition-all duration-300"
             href="/"
           >
             Dennis B
@@ -65,7 +65,7 @@ export default function Navigation() {
         </div>
         <div className="navbar-center hidden lg:flex">
           <motion.ul
-            className="menu menu-horizontal px-1 text-teal-600"
+            className="menu menu-horizontal px-1 text-zinc-100"
             variants={navItemVariants}
             initial="hidden"
             animate="show"
@@ -85,7 +85,7 @@ export default function Navigation() {
           </motion.ul>
         </div>
         <div className="navbar-end ">
-          <a className="btn text-teal-600 ml-10 border-none hover:rounded-xl hover:text-md hover:border-dashed transition-all duration-300" href="/resume">
+          <a className="btn text-zinc-100 ml-10 border-none hover:rounded-xl hover:text-md hover:border-dashed transition-all duration-300" href="/resume">
             Resume
           </a>
         </div>
