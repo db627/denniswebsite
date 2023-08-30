@@ -6,7 +6,7 @@ const projectList = [
     name: "Personal Website",
     description:
       "A distinctive platform designed to showcase my diverse projects. This website is intricately crafted using Next.js, augmented with the real-time capabilities of Firebase. For styling, I've leveraged the power of Tailwind CSS, and to add interactive animations, I utilized Framer Motion. A blend of these advanced technologies culminates in a seamless user experience.",
-    skills: "Next.js, Tailwind CSS, Firebase, Framer Motion, GitHub",
+    skills: "Next.js, Tailwind CSS, Firebase, Framer Motion, GitHub, Vercel",
     githubLink: "https://dennisboguslavskiy.com/",
   },
   {
