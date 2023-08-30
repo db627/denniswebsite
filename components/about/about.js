@@ -35,7 +35,7 @@ export default function About() {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center text-white p-16 bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl "
+      className="flex flex-col items-center text-white p-16 bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl m-10 rounded-2xl"
       // rounded-2xl shadow-2xl mx-14 my-6
       id="about"
       variants={aboutVariants}
@@ -47,7 +47,7 @@ export default function About() {
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center max-w-screen-lg mx-auto p-6">
         <motion.div className="prose prose-lg md:prose-xl text-white">
-          <motion.ul className="list-disc text-zinc-100 font-semibold">
+          <motion.ul className="list-disc text-zinc-100 font-semibold text-xl">
             <li>
               Computing and Business student at the New Jersey Institute of
               Technology
@@ -71,7 +71,7 @@ export default function About() {
           <Image
             src={Dennis}
             alt="Dennis Boguslavskiy Image"
-            className="border-4 border-zinc-100 rounded-2xl overflow-hidden shadow-2xl transform rotate-2"
+            className="border-4 border-yellow-400 rounded-2xl overflow-hidden shadow-2xl transform rotate-2"
             style={{ height: "auto", width: "20rem" }}
             width={350}
             height={350}

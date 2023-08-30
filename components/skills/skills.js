@@ -46,16 +46,16 @@ const Skills = () => {
       <div className="flex flex-wrap justify-center space-y-4 ">
         {skills.map((skill, index) => (
           <motion.div
-            className="p-4 rounded text-zinc-100 text-lg font-bold m-3 flex flex-col items-center w-64 rounded bg-zinc-700 shadow-2xl mx-3 mobile:mx-10 rounded-2xl "
+            className="p-4 text-zinc-100 text-lg font-bold m-3 flex flex-col items-center w-64 bg-zinc-700 shadow-2xl mx-3 mobile:mx-10 rounded-2xl "
             style={{ height: "10em", width: "10em" }}
             key={index}
             whileHover={{ scale: 1.1 }}
           >
             <span className="pb-2 text-zinc-100">{skill.name}</span>
-            <div className="w-full h-3 bg-white rounded">
+            <div className="w-full h-3 bg-yellow-400 rounded">
               <div
                 style={{ width: `${skill.level}%` }}
-                className="h-full bg-black rounded"
+                className="h-full bg-blue-400 rounded"
               ></div>
             </div>
           </motion.div>

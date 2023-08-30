@@ -71,9 +71,6 @@ export default function Navigation() {
               <a href="#about">About Me</a>
             </li>
             <li className="hover:underline">
-              <a href="/blog">Blog</a>
-            </li>
-            <li className="hover:underline">
               <a href="#contact">Contact</a>
             </li>
           </motion.ul>
@@ -87,3 +84,8 @@ export default function Navigation() {
     </nav>
   );
 }
+
+/*
+<li className="hover:underline">
+              <a href="/blog">Blog</a>
+            </li> */

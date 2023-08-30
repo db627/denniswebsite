@@ -84,7 +84,7 @@ const ContactForm = () => {
         <motion.input
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="p-4 bg-transparent border border-teal-600 rounded-lg"
+          className="p-4 bg-transparent border border-blue-400 rounded-lg"
           type="text"
           name="name"
           placeholder="Your Name"
@@ -95,7 +95,7 @@ const ContactForm = () => {
         <motion.input
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="p-4 border bg-transparent border-teal-600 rounded-lg"
+          className="p-4 border bg-transparent border-blue-400 rounded-lg"
           type="email"
           name="email"
           placeholder="Your Email"
@@ -106,7 +106,7 @@ const ContactForm = () => {
         <motion.textarea
           whileFocus={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="p-4 border bg-transparent border-teal-600 rounded-lg text-white"
+          className="p-4 border bg-transparent border-blue-400 rounded-lg text-white"
           name="message"
           placeholder="Your Message"
           value={formState.message}

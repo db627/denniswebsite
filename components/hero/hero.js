@@ -32,7 +32,7 @@ const HeroSection = () => {
   */
   return (
     <section
-      className="flex items-center justify-center p-8 bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl "
+      className="flex items-center justify-center p-8 rounded-xl bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl mx-14 sm:mx-10 md:mx-10 lg:mx-10"
       style={{ height: "50em" }}
     >
       <div className="space-y-6 m-5 p-5">
@@ -53,14 +53,14 @@ const HeroSection = () => {
         </motion.h1>
         <div className="flex space-x-4">
           <motion.button
-            className="btn btn-primary text-white py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-teal-600 hover:text-white focus:bg-teal-600 focus:text-white"
+            className="btn btn-primary text-yellow-400 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-teal-600 hover:text-white focus:bg-teal-600 focus:text-white"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             <a href="#about">About Me</a>
           </motion.button>
           <motion.button
-            className="btn btn-secondary text-slate-200 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-slate-500 hover:text-white focus:bg-slate-500 focus:text-white duration-300"
+            className="btn btn-secondary text-blue-400 py-2 px-4 rounded text-lg font-semibold transition-colors hover:bg-slate-500 hover:text-white focus:bg-slate-500 focus:text-white duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
