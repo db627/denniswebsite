@@ -32,12 +32,12 @@ const HeroSection = () => {
   */
   return (
     <section
-      className="flex items-center justify-center p-8 rounded-xl bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl mx-14 sm:mx-10 md:mx-10 lg:mx-10"
+      className="flex items-center justify-center p-8 rounded-xl bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl mx-10"
       style={{ height: "50em" }}
     >
-      <div className="space-y-6 m-5 p-5">
+      <div className="space-y-6 m-5 p-auto">
         <motion.h1
-          className="text-7xl font-bold text-white tracking-wide"
+          className="text-7xl font-bold text-white tracking-wide sm:text-4xl md:text-4xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
