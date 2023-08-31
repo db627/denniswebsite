@@ -20,8 +20,9 @@ const projectList = [
     name: "RobinPy",
     description:
       "A stock-monitoring tool that stands as a testament to automation's power. Integrating Robinhood via the RobinStocks API, this Python-based application fetches daily standings of my stock portfolio. Moreover, through the Twilio API, it ensures I stay updated by sending daily predictions and standings for each stock directly to my phone. RobinPy simplifies stock tracking, making financial insights more accessible.",
+    futureplans: "Deploy to Digital Ocean Droplet and run daily.",
     skills: "Python, RobinStocks API, Twilio API",
-    githubLink: "",
+    githubLink: "https://github.com/db627/Robinpy",
   },
 ];
 
