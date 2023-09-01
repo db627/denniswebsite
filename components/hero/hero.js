@@ -32,7 +32,7 @@ const HeroSection = () => {
   */
   return (
     <section
-      className="flex items-center justify-center p-8 rounded-xl bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl mx-10"
+      className="flex items-center justify-center p-8 bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl"
       style={{ height: "50em" }}
     >
       <div className="space-y-6 m-5 p-auto">
