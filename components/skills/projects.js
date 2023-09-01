@@ -7,14 +7,14 @@ const projectList = [
     description:
       "A distinctive platform designed to showcase my diverse projects. This website is intricately crafted using Next.js, augmented with the real-time capabilities of Firebase. For styling, I've leveraged the power of Tailwind CSS, and to add interactive animations, I utilized Framer Motion. A blend of these advanced technologies culminates in a seamless user experience.",
     skills: "Next.js, Tailwind CSS, Firebase, Framer Motion, GitHub, Vercel",
-    githubLink: "https://dennisboguslavskiy.com/",
+    websiteLink: "https://dennisboguslavskiy.com/",
   },
   {
     name: "Blog Website",
     description:
       "Worked in a team to develop a blogging website that uses Next.js to render pages and Bootstrap 5 for styling. The website is hosted on GitHub Pages and is powered by the GitHub API. The website is fully responsive. The website is also integrated with Google Analytics for tracking. I used GitHub Actions to automate the deployment process.",
     skills: "Next.js, Bootstarp 5, GitHub, Git Collaboration, GitHub Actions",
-    githubLink: "https://njit-wis.github.io/project-2-team-dennis-and-paul/",
+    websiteLink: "https://njit-wis.github.io/project-2-team-dennis-and-paul/",
   },
   {
     name: "RobinPy",
@@ -37,7 +37,6 @@ const projectsVariants = {
     },
   },
 };
-
 const Projects = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -60,20 +59,30 @@ const Projects = () => {
       <div className="flex flex-wrap justify-center space-y-4 ">
         {projectList.map((project, index) => (
           <motion.div
-            className="p-4 text-zinc-300 text-md font-semibold m-3 flex flex-col items-center w-64 bg-zinc-700  shadow-2xl mx-6 mobile:mx-10 rounded-2xl "
+            className="p-4 text-zinc-300 text-md font-semibold m-3 flex flex-col items-center w-64 bg-zinc-700  shadow-2xl mx-6 mobile:mx-10 rounded-2xl"
             style={{ width: "22rem" }}
             key={index}
             whileHover={{ scale: 1.1 }}
           >
-            <span className="pb-2 text-zinc-200 underline ">{project.name}</span>
+            <span className="pb-2 text-zinc-200 underline">{project.name}</span>
             <p className="text-center text-semibold">{project.description}</p>
             <p className="text-center font-normal text-md">{project.skills}</p>
-            <a
-              href={project.githubLink}
-              className="mt-2 text-yellow-400 text-semibold hover:underline"
-            >
-              Github Link
-            </a>
+            {project.githubLink && (
+              <a
+                href={project.githubLink}
+                className="mt-2 text-yellow-400 text-semibold hover:underline"
+              >
+                Github Link
+              </a>
+            )}
+            {project.websiteLink && (
+              <a
+                href={project.websiteLink}
+                className="mt-2 text-yellow-400 text-semibold hover:underline"
+              >
+                Website Link
+              </a>
+            )}
           </motion.div>
         ))}
       </div>
