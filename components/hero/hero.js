@@ -37,7 +37,7 @@ const HeroSection = () => {
     >
       <div className="space-y-6 m-5 p-auto">
         <motion.h1
-          className="text-7xl font-bold text-white tracking-wide" 
+          className="text-6xl font-bold text-white" 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
