@@ -45,9 +45,6 @@ export default function Navigation() {
               <li className="hover:underline">
                 <a href="/#about">About</a>
               </li>
-              <li className="hover:underline">
-                <a href="/blog">Blog</a>
-              </li>
               <li className="hover:underline" href="/#contact">
                 <a>Contact</a>
               </li>
