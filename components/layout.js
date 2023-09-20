@@ -5,7 +5,7 @@ import Hero from './hero/hero';
 import Footer from './footer/footer';
 import Skills from './skills/skills';
 import Projects from './skills/projects';
-import Form from './form/form'
+import Contact from './contact/contact';
 import Heading from './heading/heading';
 
 export default function Layout({ children }) {
@@ -21,7 +21,7 @@ export default function Layout({ children }) {
       <About />
       <Skills />
       <motion.div style={{ y: translateY }}>{children}</motion.div>
-      <Form />
+      <Contact />
       <Footer />
     </div>
   );

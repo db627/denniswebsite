@@ -124,10 +124,42 @@ export default function Resumebody() {
         </div>
         <div className="mt-2">
           <div className="font-semibold">
+            Python Development Contractor - Premiere Medical Lab
+          </div>
+          <div className="text-sm text-zinc-400">
+            Python Development Contractor | Edison, NJ | September, 2023 -
+            Present
+          </div>
+          <ul>
+            <li>
+              • Crafted a bespoke Python GUI application tailored to client
+              specifications, leveraging agile methodologies for iterative
+              development.
+            </li>
+            <li>
+              • Developed a Python GUI application to seamlessly query data from
+              a MySQL database, structure the information, and export data to
+              Excel.
+            </li>
+            <li>
+              • Employed GUI frameworks including Tkinter and PyQt5 to enhance
+              the user experience.
+            </li>
+            <li>
+              • Integrated exception handling mechanisms to guarantee
+              uninterrupted and smooth application performance.
+            </li>
+            <li>
+              <strong>Skills: </strong> Python, MySQL, Tkinter, PyQt5, Agile Methodologies
+            </li>
+          </ul>
+        </div>
+        <div className="mt-2">
+          <div className="font-semibold">
             Inventory Control Intern - Merola Tile
           </div>
           <div className="text-sm text-zinc-400">
-            Inventory Control Intern | Manalapan, NJ | July 11, 2023 - Present
+            Inventory Control Intern | Manalapan, NJ | July, 2023 - August, 2023
           </div>
           <ul>
             <li>
