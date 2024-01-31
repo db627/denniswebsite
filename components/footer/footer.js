@@ -50,7 +50,14 @@ export default function Footer() {
       </div>
       <div className="flex gap-4 mt-4 items-center justify-center">
         {/* Replace # with your actual social media links */}
-          {/* Replace this with your actual social media icon */
+        <a
+          href="https://instagram.com/dennisbogus"
+          className="hover:underline justify-center"
+          target="_blank"
+        >
+          {/* Replace this with your actual social media icon */}
+          <Image src={Instagram} alt="Instagram" width={20} />
+        </a>
         <a
           href="https://github.com/db627"
           className="hover:underline justify-center "
