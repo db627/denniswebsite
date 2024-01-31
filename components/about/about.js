@@ -71,7 +71,7 @@ export default function About() {
           <Image
             src={Dennis}
             alt="Dennis Boguslavskiy Image"
-            className="border-4 border-yellow-400 rounded-2xl overflow-hidden shadow-2xl transform rotate-2"
+            className="border-4 border-yellow-400 rounded-2xl overflow-hidden shadow-2xl transform rotate-2 opacity-0"
             style={{ height: "auto", width: "20rem" }}
             width={350}
             height={350}
