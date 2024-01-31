@@ -106,15 +106,16 @@ export default function Resumebody() {
           <div className="text-sm text-zinc-400">
             Newark, NJ | BS in Computing and Business
           </div>
-          <div>GPA: 3.7</div>
+          <div></div>
           <div>
-            First year student that maintained Dean’s List during the Fall 2022
+            Second year student that maintained Dean’s List during the Fall 2022
             and Spring 2023 semesters.
           </div>
           <div>
             Related Coursework: Roadmap to Computing, Introduction to Computer
-            Science 1, Introduction to Website Development, Building Web
-            Applications, Principles of Financial Accounting, Calculus 1
+            Science 1, Introduction to Computer Science 2, Fundamentals of Computer Science 1, Programming Language Concepts,
+            Introduction to Website Development, Building Web
+            Applications, Principles of Financial Accounting
           </div>
         </div>
       </div>
