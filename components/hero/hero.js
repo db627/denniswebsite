@@ -45,7 +45,7 @@ const HeroSection = () => {
      */
   return (
     <section
-      className="flex items-center justify-center p-8 "
+      className="flex items-center justify-center p-3"
       style={{ height: "50em" }}
     >
       <div className="space-y-6 m-5 p-auto">

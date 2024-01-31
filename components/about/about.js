@@ -35,7 +35,7 @@ export default function About() {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center text-white p-16 bg-gradient-to-br  "
+      className="flex flex-col items-center text-white p-5 bg-gradient-to-br  "
       // rounded-2xl shadow-2xl mx-14 my-6
       id="about"
       variants={aboutVariants}
