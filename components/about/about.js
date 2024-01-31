@@ -45,7 +45,7 @@ export default function About() {
       <motion.h1 className="text-4xl md:text-6xl text-zinc-100 font-semibold font-mono mb-8 tracking-wide rounded-xl ">
         About Me:
       </motion.h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center max-w-screen-lg mx-auto p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center max-w-screen-lg mx-auto p-4">
         <motion.div className="prose prose-lg md:prose-xl text-white">
           <motion.ul className="list-disc text-zinc-100 font-semibold text-xl">
             <li>

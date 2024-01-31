@@ -43,10 +43,10 @@ const Skills = () => {
       <h2 className="text-4xl font-bold font-mono mb-8 text-zinc-100 ">
         Skills
       </h2>
-      <div className="flex flex-wrap justify-center space-y-4 ">
+      <div className="flex flex-wrap justify-center  ">
         {skills.map((skill, index) => (
           <motion.div
-            className="p-4 text-zinc-100 text-lg font-bold m-3 flex flex-col items-center w-64 bg-zinc-700 shadow-2xl mx-3 mobile:mx-10  "
+            className="p-5 text-zinc-100 text-lg font-bold my-3 flex flex-col items-center w-64 bg-zinc-700 shadow-2xl mx-1 mobile:mx-10  "
             style={{ height: "10em", width: "10em" }}
             key={index}
             whileHover={{ scale: 1.1 }}
