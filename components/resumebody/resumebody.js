@@ -124,11 +124,26 @@ export default function Resumebody() {
         </div>
         <div className="mt-2">
           <div className="font-semibold">
+            Vice President - Gadya Payment Solutions
+          </div>
+          <div className="text-sm text-zinc-400">
+            Vice President | Marlboro, NJ | October, 2023 -
+            Present
+          </div>
+          <ul>
+            <li>
+              • Oversee day to day operations of the company. 
+            </li>
+            
+          </ul>
+        </div>
+        <div className="mt-2">
+          <div className="font-semibold">
             Python Development Contractor - Premiere Medical Lab
           </div>
           <div className="text-sm text-zinc-400">
             Python Development Contractor | Edison, NJ | September, 2023 -
-            Present
+            November, 2023
           </div>
           <ul>
             <li>

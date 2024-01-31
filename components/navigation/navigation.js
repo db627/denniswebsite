@@ -16,7 +16,7 @@ const navItemVariants = {
 export default function Navigation() {
   return (
     <nav id="top">
-      <motion.div className="navbar ">
+      <motion.div className="navbar font-mono ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn lg:hidden border-none hover:p-3 hover:border-dashed transform-all duration-300">
@@ -25,7 +25,7 @@ export default function Navigation() {
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="teal"
+                stroke="white"
               >
                 <path
                   strokeLinecap="round"

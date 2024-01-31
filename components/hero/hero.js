@@ -30,26 +30,37 @@ const HeroSection = () => {
         />
       </motion.div>
   */
-  return (
-    <section
-      className="flex items-center justify-center p-8 bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl"
-      style={{ height: "50em" }}
-    >
-      <div className="space-y-6 m-5 p-auto">
-        <motion.h1
-          className="text-6xl font-bold text-white" 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          Hello! I am Dennis a{" "}
-          <Typewriter
+
+      /*
+      <Typewriter
             options={{
-              strings: [" Student!", " Software Dev!", " Web Dev!"],
+              strings: [" Student!", " Software Dev!", " Web Dev!", "Data Analyst!"],
               autoStart: true,
               loop: true,
             }}
           />
+      */
+     /*
+     bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl
+     */
+  return (
+    <section
+      className="flex items-center justify-center p-8 "
+      style={{ height: "50em" }}
+    >
+      <div className="space-y-6 m-5 p-auto">
+        <motion.h1
+          className="text-6xl text-white font-mono" 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1.5 }}
+          transition={{ delay: 0.2, duration: 2 }}
+        >
+          Hello! I am Dennis
+        </motion.h1>
+        <motion.h1 className="text-white text-4xl font-mono "initial={{ opacity: 0 }}
+          animate={{ opacity: 1.5 }}
+          transition={{ delay: 0.2, duration: 2}}>
+          Student. Web Developer. Software Dev. Data Analyst
         </motion.h1>
         <div className="flex space-x-4">
           <motion.button
