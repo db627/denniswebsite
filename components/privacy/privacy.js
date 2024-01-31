@@ -15,12 +15,12 @@ export default function Privacybody() {
   return (
     <>
       <Head>
-        <script async src={``} />
+        <script async src={``} className=""/>
 
       </Head>
-      <div className="p-10 " id="privacypage">
+      <div className="p-10 bg-zinc-800 " id="privacypage">
         <h1
-          className="font-bold border-b text-black pt-20 text-6xl ml-10 "
+          className="font-bold border-b text-white pt-20 text-6xl ml-10 "
           id="title"
         >
           Privacy Policy
@@ -30,16 +30,16 @@ export default function Privacybody() {
             className="w-full md:w-1/4 lg:w-1/4 sticky top-0 pt- rounded"
             id="toc_menu"
           >
-            <div className="ml-10 mr-10 sticky top-0">
+            <div className="ml-10 mr-10 sticky top-0 text-white">
               <h3 className="justify-left mr-10 mt-5 font-bold">Navigation</h3>
-              <Bodynav ids={ids} />
+              <Bodynav ids={ids} className="text-white"/>
             </div>
           </nav>
 
-          <main className=" ml-10 text-black">
-            <div className=" mb-3 mt-5 text-black">
+          <main className=" ml-10 text-white">
+            <div className=" mb-3 mt-5 text-white">
               By{" "}
-              <a href="#" className="text-black">
+              <a href="#" className="text-white">
                 Dennis Boguslavskiy
               </a>
               <span className="text-gray-500 ml-3">

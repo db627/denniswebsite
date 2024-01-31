@@ -16,10 +16,10 @@ const navItemVariants = {
 export default function Navigation() {
   return (
     <nav id="top">
-      <motion.div className="navbar ">
+      <motion.div className="navbar bg-zinc-800">
         <div className="navbar-start text-center">
           <a
-            className="btn btn-ghost normal-case text-xl pr-3 text-teal-900 text-center"
+            className="btn btn-ghost normal-case text-xl pr-3 text-white text-center"
             href="/"
           >
             Dennis B
