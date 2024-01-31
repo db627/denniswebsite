@@ -17,7 +17,7 @@ export default function Navigation() {
   return (
     <nav id="top">
       <motion.div className="navbar">
-        <div className="navbar-start ">
+        <div className="navbar-start font-mono">
           <div className="dropdown">
             <label tabIndex={0} className="btn border-none focus:border-dashed focus:border-teal-600 focus:p-3 hover:border-dashed hover:border-teal-600 hover:p-3 transition-all duation-300 lg:hidden">
               <svg
@@ -63,7 +63,7 @@ export default function Navigation() {
             Dennis B
           </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex font-mono">
           <motion.ul
             className="menu menu-horizontal px-1 text-zinc-100"
             variants={navItemVariants}
