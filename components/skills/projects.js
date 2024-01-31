@@ -53,13 +53,13 @@ const Projects = () => {
       initial="hidden"
       animate={inView ? "show" : "hidden"}
     >
-      <h2 className="text-4xl font-bold mb-8 underline text-zinc-100 ">
+      <h2 className="text-4xl mb-8 font-bold text-zinc-100 font-mono ">
         Projects
       </h2>
       <div className="flex flex-wrap justify-center space-y-4 ">
         {projectList.map((project, index) => (
           <motion.div
-            className="p-4 text-zinc-300 text-md font-semibold m-3 flex flex-col items-center w-64 bg-zinc-700  shadow-2xl mx-6 mobile:mx-10 rounded-2xl"
+            className="p-4 text-zinc-300 text-md font-semibold m-3 flex flex-col items-center w-64 bg-zinc-700  shadow-2xl mx-6 mobile:mx-10"
             style={{ width: "22rem" }}
             key={index}
             whileHover={{ scale: 1.1 }}

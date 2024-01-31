@@ -33,20 +33,20 @@ const Skills = () => {
   return (
     <motion.div
       ref={ref}
-      className=" py-16 text-white flex flex-col items-center"
+      className=" py-16 text-white flex flex-col items-center font-mono"
       style={{ minHeight: "200px" }}
       transition={{ duration: 2 }}
       variants={skillsVariants}
       initial="hidden"
       animate={inView ? "show" : "hidden"}
     >
-      <h2 className="text-4xl font-bold mb-8 underline text-zinc-100 ">
+      <h2 className="text-4xl font-bold font-mono mb-8 text-zinc-100 ">
         Skills
       </h2>
       <div className="flex flex-wrap justify-center space-y-4 ">
         {skills.map((skill, index) => (
           <motion.div
-            className="p-4 text-zinc-100 text-lg font-bold m-3 flex flex-col items-center w-64 bg-zinc-700 shadow-2xl mx-3 mobile:mx-10 rounded-2xl "
+            className="p-4 text-zinc-100 text-lg font-bold m-3 flex flex-col items-center w-64 bg-zinc-700 shadow-2xl mx-3 mobile:mx-10  "
             style={{ height: "10em", width: "10em" }}
             key={index}
             whileHover={{ scale: 1.1 }}

@@ -1,8 +1,8 @@
 export default function Contact(){
   return (
-    <section className="bg-gradient-to-br m-5 from-zinc-600 to-zinc-800 shadow-2xl rounded-xl justify-center align-middle" style={{height: '40vh'}}>
+    <section className="justify-center align-middle font-mono bg-zinc-700 " style={{height: '40vh'}}>
       <div className="px-6  pt-20 pb-5 text-center text-white justify-center ">
-        <h1 id="contact " className="text-5xl font-semibold ">
+        <h1 id="contact " className="text-5xl font-mono m-3">
           Contact Me
         </h1>
         <p className="text-xl">
