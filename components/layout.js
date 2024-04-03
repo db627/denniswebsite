@@ -1,5 +1,6 @@
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 import Navigation from './navigation/navigation';
 import About from './about/about';
 import Hero from './hero/hero';
@@ -16,6 +17,7 @@ export default function Layout({ children }) {
   return (
     <div className="bg-zinc-800"> 
       {children}
+      <Analytics />
       < SpeedInsights />
       <Heading />
       <Navigation />
