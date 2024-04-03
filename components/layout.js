@@ -1,4 +1,5 @@
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navigation from './navigation/navigation';
 import About from './about/about';
 import Hero from './hero/hero';
@@ -14,6 +15,8 @@ export default function Layout({ children }) {
 
   return (
     <div className="bg-zinc-800"> 
+      {children}
+      < SpeedInsights />
       <Heading />
       <Navigation />
       <Hero />
