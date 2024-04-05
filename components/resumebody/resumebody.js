@@ -85,7 +85,7 @@ export default function Resumebody() {
             </div>
           </li>
           <li className="flex justify-between items-center">
-            <span>Google Analytics, MailChimp, Social Media Marketing</span>
+            <span>Google Analytics, Meta Business, Social Media Marketing</span>
             <div className="w-64 h-1.5 bg-gray-600 rounded">
               <div
                 className="h-full bg-teal-400 rounded"
@@ -138,6 +138,9 @@ export default function Resumebody() {
             
           </ul>
         </div>
+        <div className = "line">
+          <hr className="mt-4" />
+        </div>
         <div className="mt-2">
           <div className="font-semibold">
             Python Development Contractor - Premiere Medical Lab
@@ -170,6 +173,9 @@ export default function Resumebody() {
             </li>
           </ul>
         </div>
+        <div className = "line">
+          <hr className="mt-4" />
+        </div>
         <div className="mt-2">
           <div className="font-semibold">
             Inventory Control Intern - Merola Tile
@@ -196,6 +202,10 @@ export default function Resumebody() {
               Communication, Microsoft Excel, Microsoft Office, Time Management
             </li>
           </ul>
+        </div>
+
+        <div className = "line">
+          <hr className="mt-4" />
         </div>
         <div className="mt-2">
           <div className="font-semibold">Contractor – Stay Healthy Inc</div>
@@ -224,7 +234,9 @@ export default function Resumebody() {
             </li>
           </ul>
         </div>
-
+        <div className = "line">
+          <hr className="mt-4" />
+        </div>
         <div className="mt-4">
           <div className="font-semibold">Freelancer – Gadya Media</div>
           <div className="text-sm text-zinc-400">
