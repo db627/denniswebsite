@@ -125,6 +125,32 @@ export default function Resumebody() {
         </div>
         <div className="mt-2">
           <div className="font-semibold">
+            IT Intern - Merola Tile 
+          </div>
+          <div className="text-sm text-zinc-400">
+            IT Intern | Manalapan, NJ | June, 2024 -
+            August, 2024
+          </div>
+          <ul>
+            <li>
+              • Conducted comprehensive data analysis and generated detailed reports on quarterly KPIs using advanced functionalities of Microsoft Excel.
+            </li>
+            <li>
+            • Spearheaded the development of a full-stack web application to optimize the Quality Control PO process, utilizing Python, Flask, and various JavaScript libraries.
+            </li>
+            <li>
+            • Provided efficient IT helpdesk support, promptly addressing and resolving hardware and software issues.
+            </li>
+            <li>
+            • Collaborated on diverse projects, including reporting and presenting emerging technologies to leadership.
+            </li>
+          </ul>
+        </div>
+        <div className = "line">
+          <hr className="mt-4" />
+        </div>
+        <div className="mt-2">
+          <div className="font-semibold">
             Vice President - Gadya Payment Solutions
           </div>
           <div className="text-sm text-zinc-400">
