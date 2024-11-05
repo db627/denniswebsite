@@ -1,93 +1,34 @@
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-const projectList = [
-  {
-    name: "Personal Website",
-    description:
-      "A distinctive platform designed to showcase my diverse projects. This website is intricately crafted using Next.js, augmented with the real-time capabilities of Firebase. For styling, I've leveraged the power of Tailwind CSS, and to add interactive animations, I utilized Framer Motion. A blend of these advanced technologies culminates in a seamless user experience.",
-    skills: "Next.js, Tailwind CSS, Firebase, Framer Motion, GitHub, Vercel",
-    websiteLink: "https://dennisboguslavskiy.com/",
-  },
-  {
-    name: "Blog Website",
-    description:
-      "Worked in a team to develop a blogging website that uses Next.js to render pages and Bootstrap 5 for styling. The website is hosted on GitHub Pages and is powered by the GitHub API. The website is fully responsive. The website is also integrated with Google Analytics for tracking. I used GitHub Actions to automate the deployment process.",
-    skills: "Next.js, Bootstarp 5, GitHub, Git Collaboration, GitHub Actions",
-    websiteLink: "https://njit-wis.github.io/project-2-team-dennis-and-paul/",
-  },
-  {
-    name: "RobinPy",
-    description:
-      "A stock-monitoring tool that stands as a testament to automation's power. Integrating Robinhood via the RobinStocks API, this Python-based application fetches daily standings of my stock portfolio. Moreover, through the Twilio API, it ensures I stay updated by sending daily predictions and standings for each stock directly to my phone. RobinPy simplifies stock tracking, making financial insights more accessible.",
-    futureplans: "Deploy to Digital Ocean Droplet and run daily.",
-    skills: "Python, RobinStocks API, Twilio API",
-    githubLink: "https://github.com/db627/Robinpy",
-  },
+// Projects.jsx
+import { motion } from 'framer-motion';
+const projects = [
+  { name: "Personal Website", description: "Built with Next.js and Tailwind CSS", link: "#" },
+  { name: "Blog Platform", description: "Collaborative project with GitHub API", link: "#" },
+  { name: "RobinPy", description: "Stock-monitoring tool using RobinStocks API", link: "#" },
+  // Add more projects here
 ];
 
-const projectsVariants = {
-  hidden: { opacity: 0, x: -50 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 1.5,
-      ease: "easeInOut",
-    },
-  },
-};
-const Projects = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
+// Projects.jsx
+function Projects() {
   return (
-    <motion.div
-      ref={ref}
-      className="py-16 text-white flex flex-col items-center"
-      style={{ minHeight: "200px" }}
-      transition={{ duration: 2 }}
-      variants={projectsVariants}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-    >
-      <h2 className="text-4xl mb-8 font-bold text-zinc-100 font-mono ">
-        Projects
-      </h2>
-      <div className="flex flex-wrap justify-center space-y-4 ">
-        {projectList.map((project, index) => (
-          <motion.div
-            className="p-4 text-zinc-300 text-md font-semibold m-3 flex flex-col items-center w-64 bg-zinc-700  shadow-2xl mx-6 mobile:mx-10"
-            style={{ width: "22rem" }}
+    <div id="projects" className="py-16 ">
+      <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {projects.map((project, index) => (
+          <div
             key={index}
-            whileHover={{ scale: 1.1 }}
+            className="bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform" // Removed shadow-lg class
           >
-            <span className="pb-2 text-zinc-200 underline">{project.name}</span>
-            <p className="text-center text-semibold">{project.description}</p>
-            <p className="text-center font-normal text-md">{project.skills}</p>
-            {project.githubLink && (
-              <a
-                href={project.githubLink}
-                className="mt-2 text-yellow-400 text-semibold hover:underline"
-              >
-                Github Link
-              </a>
-            )}
-            {project.websiteLink && (
-              <a
-                href={project.websiteLink}
-                className="mt-2 text-yellow-400 text-semibold hover:underline"
-              >
-                Website Link
-              </a>
-            )}
-          </motion.div>
+            <h3 className="text-2xl font-semibold text-white">{project.name}</h3>
+            <p className="text-gray-400">{project.description}</p>
+            <a href={project.link} className="text-blue-400 hover:underline mt-2 block">
+              View Project
+            </a>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
-};
+}
 
 export default Projects;
+
