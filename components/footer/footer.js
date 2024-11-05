@@ -1,64 +1,28 @@
-import { motion } from 'framer-motion';
-import Github from '/public/github_logo.png'
-import Image from 'next/image'
-import Instagram from '/public/instagram_logo.png'
+// Footer.jsx
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
-const footerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
-export default function Footer() {
-
-
+function Footer() {
   return (
-    <footer
-      variants={footerVariants}
-      initial="hidden"
-      className="grid grid-cols-1 gap-4 p-4 text-white bg-black "
-      style={{ height: "30vh" }}
-    >
-      <div className="grid grid-cols-1 sm:grid-cols-3">
-        <div className="flex justify-center">
-          <a
-            href="/privacy_page"
-            className="hover:underline transition-all duration-300 "
-          >
-            Privacy Policy
+    <footer className="bg-gradient-to-br from-gray-800 to-gray-900 py-6 text-center text-gray-400 mt-16">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="flex justify-center gap-6 mb-4">
+          <a href="https://www.linkedin.com/in/dennis-boguslavskiy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            <FaLinkedin size="1.5em" />
+          </a>
+          <a href="https://github.com/db627" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            <FaGithub size="1.5em" />
+          </a>
+          <a href="mailto:dennisboguslavskiy@gmail.com" className="hover:text-white transition-colors">
+            <FaEnvelope size="1.5em" />
           </a>
         </div>
-        <div className="flex justify-center">
-          <a
-            href="https://www.linkedin.com/in/dennis-boguslavskiy/"
-            className="hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <div className="flex justify-center">
-          <a href="#top" className="hover:underline">
-            Back to Top
-          </a>
-        </div>
+        <div className="border-t border-gray-700 my-4"></div>
+        <p className="text-sm">
+          © {new Date().getFullYear()} Dennis Boguslavskiy. All rights reserved.
+        </p>
       </div>
-      <div className="flex gap-4 mt-4 items-center justify-center">
-        <a
-          href="https://github.com/db627"
-          className="hover:underline justify-center "
-          target="_blank"
-        >
-          {/* Replace this with your actual social media icon */}
-          <Image src={Github} alt="GitHub" width={20} />
-        </a>
-      </div>
-      <p className="text-white text-center">&copy; Dennnis Boguslavskiy</p>
     </footer>
   );
 }
+
+export default Footer;

@@ -1,68 +1,35 @@
+// Skills.jsx
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNode } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-
 const skills = [
-  { name: "HTML/CSS", level: 80 },
-  { name: "Java", level: 60 },
-  { name: "JavaScript", level: 40 },
-  { name: "React", level: 55 },
-  { name: "Next.js", level: 75 },
-  { name: "Tailwind CSS", level: 90 },
-  { name: "Bootstrap", level: 90 },
-  { name: "Python", level: 70 },
+  { icon: <FaHtml5 />, name: "HTML5" },
+  { icon: <FaCss3 />, name: "CSS3" },
+  { icon: <FaJs />, name: "JavaScript" },
+  { icon: <FaReact />, name: "React" },
+  { icon: <FaNode />, name: "Node.js" },
 ];
 
-const skillsVariants = {
-  hidden: { opacity: 0, x: -50 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 1.5,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const Skills = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true, // Triggers the animation only once
-    threshold: 0.1, // 10% of the element is visible
-  });
-
+// Skills.jsx
+function Skills() {
   return (
-    <motion.div
-      ref={ref}
-      className=" py-16 text-white flex flex-col items-center font-mono"
-      style={{ minHeight: "200px" }}
-      transition={{ duration: 2 }}
-      variants={skillsVariants}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-    >
-      <h2 className="text-4xl font-bold font-mono mb-8 text-zinc-100 ">
-        Skills
-      </h2>
-      <div className="flex flex-wrap justify-center  ">
+    <div id="skills" className="py-16 ">
+      <h2 className="text-4xl font-bold text-center mb-10">Skills</h2>
+      <div className="flex justify-center gap-10">
         {skills.map((skill, index) => (
-          <motion.div
-            className="p-5 text-zinc-100 text-lg font-bold my-3 flex flex-col items-center w-64 bg-zinc-700 shadow-2xl mx-1 mobile:mx-10  "
-            style={{ height: "10em", width: "10em" }}
+          <div
             key={index}
-            whileHover={{ scale: 1.1 }}
+            className="text-5xl text-gray-300 hover:text-blue-400 transition-colors duration-200"
+            whileHover={{ scale: 1.2 }}
           >
-            <span className="pb-2 text-zinc-100">{skill.name}</span>
-            <div className="w-full h-3 bg-yellow-400 rounded">
-              <div
-                style={{ width: `${skill.level}%` }}
-                className="h-full bg-blue-400 rounded"
-              ></div>
-            </div>
-          </motion.div>
+            {skill.icon}
+            <p className="text-sm text-center mt-2 text-gray-400">{skill.name}</p>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
-};
+}
 
 export default Skills;
+
+
