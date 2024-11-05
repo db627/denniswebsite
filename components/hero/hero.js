@@ -14,7 +14,7 @@ function Hero() {
       >
         <Typewriter words={['Dennis Boguslavskiy']} loop={false} cursor />
       </motion.h1>
-      <p className="text-gray-300 text-lg mb-8">Web Developer, Problem Solver, Innovator</p>
+      <p className="text-gray-300 text-lg mb-8">Student, Software Developer, Web Developer, Data Analyst, Problem Solver</p>
       <div className="flex gap-6">
         <a href="https://www.linkedin.com/in/dennis-boguslavskiy/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="text-3xl text-blue-500 hover:scale-110 transition-transform duration-200" />
