@@ -6,7 +6,7 @@ function SideNav() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <nav className="fixed top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 w-14 h-auto py-4 rounded-full flex flex-col items-center shadow-lg">
+    <nav className="fixed top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 w-14 h-auto py-4 rounded-full flex flex-col items-center shadow-lg hidden md:flex"> {/* 'hidden md:flex' hides it on mobile */}
       <NavItem href="#hero" icon={<FaHome />} label="Home" hovered={hovered} setHovered={setHovered} />
       <NavItem href="#experience" icon={<FaBriefcase />} label="Experience" hovered={hovered} setHovered={setHovered} />
       <NavItem href="#about" icon={<FaUser />} label="About" hovered={hovered} setHovered={setHovered} />
