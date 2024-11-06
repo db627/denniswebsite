@@ -16,13 +16,17 @@ function App() {
       
       
       {/* Main Content */}
-      <main className="relative z-10  bg-gradient-to-br from-gray-800 to-gray-900"> {/* Ensures content is above the particles */}
+      <main className="relative z-10  "> {/* Ensures content is above the particles */}
       <SideNav />
+      <div className="bg-gradient-to-br from-gray-800 to-gray-900">
         <Experience />
+        </div>
         <AboutMe />
         <Projects />
+        <div className='bg-gradient-to-br from-gray-800 to-gray-900'>
         <Skills />
         <Footer />
+        </div>
       </main>
     </div>
   );
