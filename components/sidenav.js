@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 function SideNav() {
   return (
-    <nav className="fixed top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 w-14 h-auto py-4 rounded-full flex-col items-center shadow-lg hidden md:flex">
+    <nav className="fixed md:top-1/2 md:left-4 md:transform md:-translate-y-1/2 bg-gray-800 bg-opacity-75 w-full md:w-14 h-auto py-2 md:py-4 md:rounded-full flex justify-around md:flex-col items-center shadow-lg bottom-0 md:bottom-auto">
       <NavItem to="hero" icon={<FaHome />} label="Home" />
       <NavItem to="experience" icon={<FaBriefcase />} label="Experience" />
       <NavItem to="about" icon={<FaUser />} label="About" />
@@ -15,7 +15,21 @@ function SideNav() {
   );
 }
 
-function NavItem({ to, icon, label }) {
+function NavItem({ to, icon, label, href }) {
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-400 hover:text-white transition-colors duration-300 p-2"
+      >
+        {icon}
+        <span className="sr-only">{label}</span> {/* For accessibility */}
+      </a>
+    );
+  }
+
   return (
     <Link
       to={to}

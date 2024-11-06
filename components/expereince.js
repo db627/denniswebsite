@@ -25,7 +25,7 @@ const experiences = [
 
 function Experience() {
   return (
-    <div id="experience" className="py-16 px-8 bg-gradient-to-br from-gray-800 to-gray-900">
+    <div id="experience" className="py-16 px-8 ">
       <h2 className="text-4xl font-bold text-center mb-10">Experience</h2>
       
       <div className="relative flex flex-col md:flex-row md:justify-center md:space-x-10">
