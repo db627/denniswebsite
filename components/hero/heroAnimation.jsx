@@ -117,7 +117,7 @@ const HeroAnimation = () => {
       
       {/* Hero Content */}
       <HeroContent>
-        <ProfileImage src="profile.jpg" alt="Profile" /> {/* Update the path to your image */}
+        <ProfileImage src="components/hero/profile.JPG" alt="Profile" /> {/* Update the path to your image */}
         
         <h1 className="text-5xl font-bold mb-4 p-2">Dennis Boguslavskiy</h1>
         
