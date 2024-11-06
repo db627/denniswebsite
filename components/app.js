@@ -5,7 +5,6 @@ import Projects from './skills/projects';
 import Skills from './skills/skills';
 import Footer from './footer/footer';
 import SideNav from './sidenav';
-import AboutImg from './aboutImg/aboutImg'
 import HeroAnimation from './hero/heroAnimation';
 
 function App() {
