@@ -1,9 +1,9 @@
 // Projects.jsx
 import { motion } from 'framer-motion';
 const projects = [
-  { name: "Personal Website", description: "Built with Next.js and Tailwind CSS", link: "#" },
-  { name: "Blog Platform", description: "Collaborative project with GitHub API", link: "#" },
-  { name: "RobinPy", description: "Stock-monitoring tool using RobinStocks API", link: "#" },
+  { name: "Personal Website", description: "Built with Next.js and Tailwind CSS", link: "https://dennisboguslavskiy.com" },
+  { name: "Blog Platform", description: "Collaborative project with NextJS and Bootsrap 5", link: "https://njit-wis.github.io/project-2-team-dennis-and-paul/" },
+  { name: "RobinPy", description: "Stock-monitoring tool using RobinStocks API and Python", link: "https://github.com/db627/Robinpy" },
   // Add more projects here
 ];
 

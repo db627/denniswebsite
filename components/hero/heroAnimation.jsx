@@ -1,4 +1,3 @@
-// HeroAnimation.jsx
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -31,7 +30,21 @@ const HeroContent = styled.div`
   position: relative;
   z-index: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 `;
+
+const ProfileImage = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 3px solid #ffffff;
+  object-fit: cover; /* Ensures the image scales to cover the area without distortion */
+  object-position: center; /* Centers the image within the circle */
+`;
+
 
 const HeroAnimation = () => {
   const [init, setInit] = useState(false);
@@ -104,13 +117,23 @@ const HeroAnimation = () => {
       
       {/* Hero Content */}
       <HeroContent>
-        <h1 className="text-5xl font-bold mb-4 p-2">
-          <Typewriter words={["Dennis Boguslavskiy"]} loop={false} cursor />
-        </h1>
-        <p className="text-gray-300 text-lg mb-8 p-2">
-          Student, Software Developer, Web Developer, Data Analyst, Problem Solver
+        <ProfileImage src="profile.jpg" alt="Profile" /> {/* Update the path to your image */}
+        
+        <h1 className="text-5xl font-bold mb-4 p-2">Dennis Boguslavskiy</h1>
+        
+        <p className="text-gray-300 text-xl mb-8 p-2">
+          <Typewriter
+            words={["Student, Software Developer, Data Analyst, Problem Solver"]}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={90}
+            deleteSpeed={60}
+            delaySpeed={1000}
+          />
         </p>
-        <div className="flex justify-center gap-6"> {/* Added justify-center here */}
+        
+        <div className="flex justify-center gap-6">
           <a
             href="https://www.linkedin.com/in/dennis-boguslavskiy/"
             target="_blank"

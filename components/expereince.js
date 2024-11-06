@@ -6,19 +6,23 @@ const experiences = [
     title: "IT Intern", 
     company: "Merola Tile", 
     duration: "09/2024 - Present", 
-    description: "Responsible for maintaining and troubleshooting IT infrastructure and providing support to staff."
+    description: "I conducted in-depth data analysis and generated quarterly KPI reports using advanced Excel functions, led the development of a full-stack web app to streamline Quality Control PO processes with Python and Flask, provided responsive IT helpdesk support for hardware and software issues, and collaborated on projects, presenting emerging technologies to leadership.",
+    skills: "Python, Flask, Linux, NGINX, Excel, Presentation Skills"
   },
   { 
     title: "Python Development Contractor", 
     company: "Premier Medical Lab", 
     duration: "09/2023 - 10/2023", 
-    description: "Developed automated scripts for data processing and reporting, improving data handling efficiency by 40%."
+    description: "I designed a custom Python GUI application to meet client needs using agile methods, developed features to query MySQL data and export it to Excel, utilized Tkinter and PyQt5 for an enhanced user experience, and implemented exception handling for reliable performance.",
+    skills: "Software Development, Python, Agile Project Managment, Tkinter, SQL"
   },
   { 
     title: "Inventory Control Intern", 
     company: "Merola Tile", 
     duration: "07/2023 - 08/2023", 
-    description: "Streamlined inventory tracking processes and assisted in implementing an efficient warehouse system."
+    description: "I managed daily cycle counts using Excel and a warehouse management system, investigated inventory discrepancies through item log analysis, reported on counts, entered inventory adjustments, and supported special projects. My skills include Microsoft Excel, inventory analysis, data entry, teamwork, communication, Sage 300, and presentation skills.",
+    skills: "Excel, Inventory Analysis, Data Analytics, Presentation Skills"
+
   },
   // Add more experiences here
 ];
@@ -50,6 +54,7 @@ function Experience() {
               <p className="text-gray-400">{exp.company}</p>
               <span className="text-gray-500 text-sm">{exp.duration}</span>
               <p className="text-gray-300 mt-2">{exp.description}</p>
+              <p className="text-gray-400 mt-2 font-bold text-sm">Skills: {exp.skills}</p>
             </div>
           </motion.div>
         ))}
