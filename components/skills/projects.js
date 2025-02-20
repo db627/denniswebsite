@@ -1,10 +1,31 @@
 // Projects.jsx
 import { motion } from 'framer-motion';
 const projects = [
-  { name: "Personal Website", description: "Built with Next.js and Tailwind CSS", link: "https://dennisboguslavskiy.com" },
-  { name: "Blog Platform", description: "Collaborative project with NextJS and Bootsrap 5", link: "https://njit-wis.github.io/project-2-team-dennis-and-paul/" },
-  { name: "RobinPy", description: "Stock-monitoring tool using RobinStocks API and Python", link: "https://github.com/db627/Robinpy" },
-  // Add more projects here
+  {
+    name: "Stock Predictor AI Project",
+    description: "Machine learning-based stock predictor using Scikit-learn and live market data from Yahoo Finance.",
+    link: "https://github.com/db627/machinelearning-stockticker"
+  },
+  {
+    name: "Bank System Design at NJIT",
+    description: "Designed a relational database system using MySQL and SQL to manage banking operations, including branches, customers, employees, accounts, and transactions.",
+    link: ""
+  },
+  {
+    name: "Diet App Website",
+    description: "Developed a secure diet app with Flask, OpenAI API, Bootstrap, and SQL for personalized macro calculations and meal planning.",
+    link: "https://github.com/db627/dietapp"
+  },
+  {
+    name: "Consignment Management Platform for ByRaph",
+    description: "Full-stack consignment management platform built with Next.js, Tailwind CSS, and Firebase, managing inventory, payments, and analytics.",
+    link: "https://byraph.vercel.app"
+  },
+  {
+    name: "RobinPy Stock Project",
+    description: "Automated stock-monitoring tool using RobinStocks API, integrating moving average strategies and daily updates via Twilio API.",
+    link: "https://github.com/db627/Robinpy"
+  }
 ];
 
 // Projects.jsx

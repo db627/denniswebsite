@@ -10,7 +10,7 @@ function SideNav() {
       <NavItem to="about" icon={<FaUser />} label="About" />
       <NavItem to="projects" icon={<FaProjectDiagram />} label="Projects" />
       <NavItem to="skills" icon={<FaCogs />} label="Skills" />
-      <NavItem href="/resume" icon={<FaFilePdf />} label="Resume" />
+      <NavItem href="/dennisboguslavskiyresume.pdf" icon={<FaFilePdf />} label="Resume" target="_blank" rel="noopener noreferrer" />
     </nav>
   );
 }

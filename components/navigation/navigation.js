@@ -19,7 +19,10 @@ export default function Navigation() {
       <motion.div className="navbar font-mono ">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn lg:hidden border-none hover:p-3 hover:border-dashed transform-all duration-300">
+            <label
+              tabIndex={0}
+              className="btn lg:hidden border-none hover:p-3 hover:border-dashed transform-all duration-300"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -72,8 +75,13 @@ export default function Navigation() {
             </li>
           </motion.ul>
         </div>
-        <div className="navbar-end ">
-          <a className="btn text-zinc-200 text-md ml-10 border-none hover:border-dashed hover:px-2 focus:border-dashed focus:px-2 duration-300 transition-all" href="/resume">
+        <div className="navbar-end">
+          <a
+            className="btn text-zinc-200 text-md ml-10 border-none hover:border-dashed hover:px-2 focus:border-dashed focus:px-2 duration-300 transition-all"
+            href="/dennisboguslavskiyresume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume
           </a>
         </div>

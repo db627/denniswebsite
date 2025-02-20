@@ -129,9 +129,13 @@ export default function Resumebody() {
           </div>
           <div className="text-sm text-zinc-400">
             IT Intern | Manalapan, NJ | June, 2024 -
-            August, 2024
+            August, 2024 | October, 2024 - January, 2025
           </div>
           <ul>
+          <li>
+              • Integrated a IT asset management inventory system using PHP, Apache2, Linux, Netowrking, and various web development technologies.
+              Installed proper security protocols on server to ensure app is running smoothly and securly. 
+            </li>
             <li>
               • Conducted comprehensive data analysis and generated detailed reports on quarterly KPIs using advanced functionalities of Microsoft Excel.
             </li>
