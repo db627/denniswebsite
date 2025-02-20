@@ -2,17 +2,18 @@
 import { motion } from 'framer-motion';
 
 const experiences = [
+    { 
+      title: "Software Development Intern", 
+      company: "Merola Tile", 
+      duration: "June 2024 - Jan 2025", 
+      description: "Analyzed and tracked quarterly KPIs utilizing advanced Excel functions, providing clear insight into performance trends. Developed a Quality Control PO Web Application with Python, Flask, Linux, and JavaScript, reducing manual workloads and boosting efficiency. Assisted with day-to-day IT support operations, troubleshooting and resolving hardware and software issues. Implemented an IT asset management solution for 500+ inventory items, leveraging Linux, Apache2, and MySQL. Oversaw project research and deployment, coordinating strategies and timelines to achieve on-time deliverables.",
+      skills: "Python, Flask, Linux, Apache2, MySQL, JavaScript, Excel, IT Support, Project Management"
+    }
+  ];
   { 
-    title: "IT Intern", 
-    company: "Merola Tile", 
-    duration: "09/2024 - Present", 
-    description: "I conducted in-depth data analysis and generated quarterly KPI reports using advanced Excel functions, led the development of a full-stack web app to streamline Quality Control PO processes with Python and Flask, provided responsive IT helpdesk support for hardware and software issues, and collaborated on projects, presenting emerging technologies to leadership.",
-    skills: "Python, Flask, Linux, NGINX, Excel, Presentation Skills"
-  },
-  { 
-    title: "Python Development Contractor", 
+    title: "Python Development Intern", 
     company: "Premier Medical Lab", 
-    duration: "09/2023 - 10/2023", 
+    duration: "09/2023 - 11/2023", 
     description: "I designed a custom Python GUI application to meet client needs using agile methods, developed features to query MySQL data and export it to Excel, utilized Tkinter and PyQt5 for an enhanced user experience, and implemented exception handling for reliable performance.",
     skills: "Software Development, Python, Agile Project Managment, Tkinter, SQL"
   },
