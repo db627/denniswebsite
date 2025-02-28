@@ -1,157 +1,204 @@
-import { useEffect, useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import { Typewriter } from "react-simple-typewriter";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import styled from "styled-components";
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
-// Styled component for the Hero section
-const HeroContainer = styled.div`
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: #ffffff;
-`;
-
-const ParticlesBackground = styled(Particles)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-`;
-
-const HeroContent = styled.div`
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-`;
-
-const ProfileImage = styled.img`
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 16px;
-  border: 3px solid #ffffff;
-  object-fit: cover; /* Ensures the image scales to cover the area without distortion */
-  object-position: center; /* Centers the image within the circle */
-`;
-
-
-const HeroAnimation = () => {
-  const [init, setInit] = useState(false);
-
+function Hero() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
-  const options = useMemo(
-    () => ({
-      background: {
-        color: { value: "#1A2332" },
-      },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: { enable: true, mode: "push" },
-          onHover: { enable: true, mode: "repulse" },
-        },
-        modes: {
-          push: { quantity: 4 },
-          repulse: { distance: 200, duration: 0.4 },
-        },
-      },
-      particles: {
-        color: { value: "#ffffff" },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: { default: "bounce" },
-          speed: 6,
-        },
-        number: {
-          density: { enable: true },
-          value: 80,
-        },
-        opacity: { value: 0.5 },
-        shape: { type: "circle" },
-        size: { value: { min: 1, max: 5 } },
-      },
-      detectRetina: true,
-    }),
-    []
-  );
-
   return (
-    <HeroContainer>
-      {init && (
-        <ParticlesBackground
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
-      )}
-      
-      {/* Hero Content */}
-      <HeroContent id="hero">
-        <ProfileImage src="./profile.JPG" alt="Profile" /> {/* Update the path to your image */}
-        
-        <h1 className="text-5xl font-bold mb-4 p-2">Dennis Boguslavskiy</h1>
-        
-        <p className="text-gray-300 text-xl mb-8 p-2">
-          <Typewriter
-            words={["Student, Software Developer, Data Analyst, Problem Solver"]}
-            loop={true}
-            cursor
-            cursorStyle="_"
-            typeSpeed={90}
-            deleteSpeed={60}
-            delaySpeed={1000}
+    <div 
+      id="hero" 
+      className="hero h-screen flex flex-col items-center justify-center text-center relative overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)"
+      }}
+    >
+      {/* Animated light orbs */}
+      <div className="absolute w-full h-full opacity-30">
+        {[...Array(5)].map((_, index) => (
+          <motion.div
+            key={index}
+            className="absolute rounded-full"
+            style={{
+              width: `${Math.random() * 200 + 100}px`,
+              height: `${Math.random() * 200 + 100}px`,
+              left: `${index * 20}%`,
+              top: `${Math.random() * 80}%`,
+              background: "radial-gradient(circle, rgba(56,189,248,0.8) 0%, rgba(168,85,247,0.4) 70%, rgba(168,85,247,0) 100%)",
+              filter: "blur(40px)",
+            }}
+            animate={{
+              x: [0, Math.random() * 100 - 50, 0],
+              y: [0, Math.random() * 100 - 50, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
           />
-        </p>
+        ))}
+      </div>
+      
+      {/* Light effect that follows mouse */}
+      <motion.div 
+        className="absolute rounded-full opacity-20"
+        style={{
+          width: "400px",
+          height: "400px",
+          left: mousePosition.x - 200,
+          top: mousePosition.y - 200,
+          background: "radial-gradient(circle, rgba(56,189,248,0.8) 0%, rgba(168,85,247,0.4) 70%, rgba(168,85,247,0) 100%)",
+          filter: "blur(60px)",
+        }}
+        animate={{
+          left: mousePosition.x - 200,
+          top: mousePosition.y - 200,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+          damping: 20
+        }}
+      />
+      
+      {/* Grid overlay */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `,
+          backgroundSize: "40px 40px"
+        }}
+      ></div>
+      
+      {/* Content with subtle glow */}
+      <motion.div
+        className="z-10 px-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        <motion.h1
+          className="text-6xl font-bold text-white mb-6 tracking-tight"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          style={{
+            textShadow: "0 0 15px rgba(56, 189, 248, 0.3)"
+          }}
+        >
+          <Typewriter words={['Dennis Boguslavskiy']} loop={false} cursor />
+        </motion.h1>
         
-        <div className="flex justify-center gap-6">
-          <a
-            href="https://www.linkedin.com/in/dennis-boguslavskiy/"
-            target="_blank"
+        <motion.div
+          className="flex flex-wrap justify-center gap-3 mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          {['Student', 'Software Developer', 'Web Developer', 'Data Analyst', 'Problem Solver'].map((skill, index) => (
+            <motion.span 
+              key={index}
+              className="px-4 py-2 text-gray-300 text-lg rounded-full"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(255, 255, 255, 0.1)"
+              }}
+            >
+              {skill}
+            </motion.span>
+          ))}
+        </motion.div>
+        
+        <motion.div 
+          className="flex gap-6 justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <a 
+            href="https://www.linkedin.com/in/dennis-boguslavskiy/" 
+            target="_blank" 
             rel="noopener noreferrer"
+            style={{
+              transform: "translateY(0)",
+              transition: "all 0.3s ease"
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = "translateY(-5px)";
+              e.currentTarget.style.boxShadow = "0 10px 20px -10px rgba(56, 189, 248, 0.5)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
           >
-            <FaLinkedin className="text-3xl text-blue-500 hover:scale-110 transition-transform duration-200" />
+            <div 
+              style={{
+                padding: "12px",
+                borderRadius: "50%",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(255, 255, 255, 0.1)"
+              }}
+            >
+              <FaLinkedin className="text-3xl text-blue-400" />
+            </div>
           </a>
-          <a
-            href="https://github.com/db627"
-            target="_blank"
+          <a 
+            href="https://github.com/db627" 
+            target="_blank" 
             rel="noopener noreferrer"
+            style={{
+              transform: "translateY(0)",
+              transition: "all 0.3s ease"
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = "translateY(-5px)";
+              e.currentTarget.style.boxShadow = "0 10px 20px -10px rgba(255, 255, 255, 0.5)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
           >
-            <FaGithub className="text-3xl text-white hover:scale-110 transition-transform duration-200" />
+            <div 
+              style={{
+                padding: "12px",
+                borderRadius: "50%",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(255, 255, 255, 0.1)"
+              }}
+            >
+              <FaGithub className="text-3xl text-white" />
+            </div>
           </a>
-        </div>
-      </HeroContent>
-    </HeroContainer>
+        </motion.div>
+      </motion.div>
+    </div>
   );
-};
+}
 
-export default HeroAnimation;
+export default Hero;
