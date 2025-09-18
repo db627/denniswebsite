@@ -15,45 +15,48 @@ function TopNav() {
   ];
 
   useEffect(() => {
+    let timeoutId;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Clear existing timeout
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
       
-      // Update active section based on scroll position with better detection
-      const sections = navItems.map(item => item.id);
-      let currentSection = 'hero'; // default to hero
-      
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const offset = 120; // account for fixed nav height
-          
-          // Check if section is in viewport
-          if (rect.top <= offset && rect.bottom > offset) {
-            currentSection = sectionId;
+      // Debounce scroll for better mobile performance
+      timeoutId = setTimeout(() => {
+        setIsScrolled(window.scrollY > 50);
+        
+        // Update active section based on scroll position
+        const sections = navItems.map(item => item.id);
+        let currentSection = 'hero'; // default to hero
+        
+        for (const sectionId of sections) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const offset = 120; // account for fixed nav height
+            
+            // Check if section is in viewport
+            if (rect.top <= offset && rect.bottom > offset) {
+              currentSection = sectionId;
+            }
           }
         }
-      }
-      
-      setActiveSection(currentSection);
+        
+        setActiveSection(currentSection);
+      }, 10); // Small debounce for smoother scrolling
     };
 
-    // Throttle scroll events for better performance
-    let ticking = false;
-    const throttledHandleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Call once on mount
     
-    return () => window.removeEventListener('scroll', throttledHandleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
   }, []);
 
   const scrollToSection = (sectionId) => {
@@ -162,11 +165,13 @@ function TopNav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
+            style={{ touchAction: 'none' }}
           >
             {/* Backdrop */}
             <div 
               className="absolute inset-0 bg-black/20 backdrop-blur-sm"
               onClick={() => setIsMobileMenuOpen(false)}
+              style={{ touchAction: 'auto' }}
             />
             
             {/* Menu Content */}
@@ -176,6 +181,7 @@ function TopNav() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.3 }}
+              style={{ touchAction: 'auto' }}
             >
               <div className="px-8 py-6">
                 <div className="space-y-4">
