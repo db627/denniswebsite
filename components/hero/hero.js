@@ -160,7 +160,7 @@ function Hero() {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
         >
           <motion.a
-            href="#contact"
+            href="https://www.linkedin.com/in/dennis-boguslavskiy/"
             className="group relative px-10 py-4 bg-black text-white rounded-full font-semibold transition-all duration-300 hover:bg-gray-800"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
