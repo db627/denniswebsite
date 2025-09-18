@@ -21,18 +21,18 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           clearInterval(interval);
           setTimeout(() => {
             setIsVisible(false);
-            setTimeout(() => onLoadingComplete(), 1000);
-          }, 800);
+            setTimeout(() => onLoadingComplete(), 300);
+          }, 200);
           return 100;
         }
         
-        const newProgress = prev + Math.random() * 3 + 1;
+        const newProgress = prev + Math.random() * 8 + 5; // Faster progress
         const phase = Math.floor((newProgress / 100) * loadingPhases.length);
         setCurrentPhase(Math.min(phase, loadingPhases.length - 1));
         
         return Math.min(newProgress, 100);
       });
-    }, 50);
+    }, 30); // Faster interval
 
     return () => clearInterval(interval);
   }, [onLoadingComplete]);
@@ -70,6 +70,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
+          style={{ touchAction: 'none', pointerEvents: 'all' }}
         >
           {/* Animated particles background */}
           <div className="absolute inset-0 overflow-hidden">

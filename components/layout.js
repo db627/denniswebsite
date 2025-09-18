@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import App from './app';
 import LoadingScreen from './LoadingScreen';
@@ -10,6 +10,14 @@ export default function Layout({ children }) {
   const handleLoadingComplete = () => {
     setIsLoading(false);
   };
+
+  // Skip loading screen on mobile for better UX
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      setTimeout(() => setIsLoading(false), 800); // Very short loading on mobile
+    }
+  }, []);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-white">
