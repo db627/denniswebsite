@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaBriefcase, FaCalendar, FaCogs } from "react-icons/fa";
 
 const experiences = [
+    {
+    title: "Software Engineer College Hire Program / Intern",
+    company: "Depository Trust and Clearing Corporation (DTCC)",
+    duration: "May 2025 - Present",
+    description:
+      "Contributing to the development of internal web applications using Angular and Java Spring Boot, collaborating in an Agile environment with cross-functional teams, and participating in code reviews and testing to ensure high-quality software delivery.",
+    skills:
+      "Java, Spring Boot, JavaScript, Angular, RESTful APIs, Agile Methodologies, Git, Jenkins, BitBucket",
+  },
   {
     title: "IT Intern",
     company: "Merola Tile",
@@ -28,140 +38,122 @@ const experiences = [
       "I managed daily cycle counts using Excel and a warehouse management system, investigated inventory discrepancies through item log analysis, reported on counts, entered inventory adjustments, and supported special projects. My skills include Microsoft Excel, inventory analysis, data entry, teamwork, communication, Sage 300, and presentation skills.",
     skills: "Excel, Inventory Analysis, Data Analytics, Presentation Skills",
   },
-  // Add more experiences here
 ];
 
 function Experience() {
-  // Card hover state
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div 
       id="experience" 
-      className="py-20 px-8 relative"
-      style={{
-        background: "linear-gradient(to bottom, #0f3460 0%, #1a1a2e 100%)",
-        overflow: "hidden"
-      }}
+      className="py-24 px-8 bg-white"
     >
-      {/* Background light effect */}
-      <div 
-        className="absolute inset-0 w-full h-full opacity-20"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.4) 0%, rgba(56, 189, 248, 0) 25%),
-            radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0) 25%)
-          `
-        }}
-      ></div>
+      <div className="max-w-7xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <motion.div 
+            className="inline-block mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+          </motion.div>
+          
+          <motion.h2 
+            className="text-5xl md:text-7xl font-bold text-black mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Experience
+          </motion.h2>
+          
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Professional journey building innovative solutions and driving impact
+          </motion.p>
+        </div>
 
-      {/* Grid overlay */}
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: "40px 40px"
-        }}
-      ></div>
-      
-      <motion.h2 
-        className="text-4xl font-bold text-center mb-16 relative z-10"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        style={{
-          color: "white",
-          textShadow: "0 0 15px rgba(56, 189, 248, 0.3)"
-        }}
-      >
-        Experience
-      </motion.h2>
-
-      <div className="max-w-6xl mx-auto">
-        {/* Simple card layout */}
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
+        {/* Experience timeline */}
+        <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className="w-full rounded-xl overflow-hidden"
-              style={{
-                background: "rgba(30, 41, 59, 0.7)",
-                backdropFilter: "blur(10px)",
-                border: hoveredIndex === index 
-                  ? "1px solid rgba(56, 189, 248, 0.3)" 
-                  : "1px solid rgba(255, 255, 255, 0.1)",
-                boxShadow: hoveredIndex === index 
-                  ? "0 20px 40px -20px rgba(56, 189, 248, 0.2)" 
-                  : "0 15px 35px -20px rgba(0, 0, 0, 0.3)",
-                transition: "all 0.3s ease"
-              }}
-              initial={{ opacity: 0, y: 30 }}
+              className="group"
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              whileHover={{ y: -5 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <div className="p-8 relative">
-                {/* Left highlight accent */}
-                <div 
-                  className="absolute left-0 top-0 bottom-0 w-1"
-                  style={{
-                    background: "linear-gradient(to bottom, rgba(56, 189, 248, 1), rgba(168, 85, 247, 1))",
-                    opacity: hoveredIndex === index ? 1 : 0.7
-                  }}
-                ></div>
+              <div 
+                className={`relative p-8 rounded-2xl border transition-all duration-300 bg-white hover:bg-gray-50 ${
+                  hoveredIndex === index 
+                    ? 'border-black shadow-lg' 
+                    : 'border-gray-200 hover:border-gray-300'
+                }`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {/* Left accent bar */}
+                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl transition-all duration-300 ${
+                  hoveredIndex === index ? 'bg-black' : 'bg-gray-300'
+                }`} />
                 
+                {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
-                  <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{exp.title}</h3>
-                    <p 
-                      className="text-xl font-medium"
-                      style={{ color: "rgba(168, 85, 247, 1)" }}
-                    >
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className={`p-2 rounded-lg transition-all duration-300 ${
+                        hoveredIndex === index ? 'bg-black' : 'bg-gray-100'
+                      }`}>
+                        <FaBriefcase className={`text-sm transition-colors duration-300 ${
+                          hoveredIndex === index ? 'text-white' : 'text-gray-600'
+                        }`} />
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-black">
+                        {exp.title}
+                      </h3>
+                    </div>
+                    <p className="text-xl font-semibold text-gray-700 mb-1">
                       {exp.company}
                     </p>
                   </div>
-                  <span 
-                    className="text-sm py-1 px-4 rounded-full self-start"
-                    style={{
-                      background: "rgba(56, 189, 248, 0.15)",
-                      color: "rgba(56, 189, 248, 1)",
-                      border: "1px solid rgba(56, 189, 248, 0.3)",
-                      whiteSpace: "nowrap"
-                    }}
-                  >
-                    {exp.duration}
-                  </span>
+                  
+                  <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-gray-600 text-sm font-medium">
+                    <FaCalendar className="text-xs" />
+                    <span>{exp.duration}</span>
+                  </div>
                 </div>
                 
+                {/* Description */}
                 <div className="mb-8">
-                  <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    {exp.description}
+                  </p>
                 </div>
                 
+                {/* Skills */}
                 <div>
-                  <h4 className="text-sm uppercase tracking-wider mb-3 text-gray-400 font-semibold">Skills & Technologies</h4>
+                  <div className="flex items-center gap-2 mb-4">
+                    <FaCogs className="text-gray-500 text-sm" />
+                    <h4 className="text-sm uppercase tracking-wider text-gray-500 font-semibold">
+                      Skills & Technologies
+                    </h4>
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.split(', ').map((skill, skillIndex) => (
                       <motion.span 
                         key={skillIndex}
-                        className="text-sm px-3 py-1 rounded-full mb-2"
-                        style={{
-                          background: "rgba(255, 255, 255, 0.08)",
-                          color: "rgba(255, 255, 255, 0.9)",
-                          border: "1px solid rgba(255, 255, 255, 0.1)",
-                          transition: "all 0.2s ease"
-                        }}
-                        whileHover={{ 
-                          y: -2, 
-                          backgroundColor: "rgba(56, 189, 248, 0.15)",
-                          color: "rgba(56, 189, 248, 1)"
-                        }}
+                        className="px-4 py-2 bg-gray-100 border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 hover:border-gray-300 transition-all duration-200"
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
                       >
                         {skill}
                       </motion.span>
@@ -172,6 +164,16 @@ function Experience() {
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom section */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
+        </motion.div>
       </div>
     </div>
   );

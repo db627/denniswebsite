@@ -1,184 +1,159 @@
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNode, FaPython, FaDatabase, FaGit } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNode, FaPython, FaDatabase, FaGit, FaCogs } from 'react-icons/fa';
 import { SiTailwindcss, SiFlask, SiMongodb, SiFirebase } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-const skills = [
-  { 
-    icon: <FaHtml5 />, 
-    name: "HTML5",
-    color: "#E34F26" 
-  },
-  { 
-    icon: <FaCss3 />, 
-    name: "CSS3",
-    color: "#1572B6" 
-  },
-  { 
-    icon: <FaJs />, 
-    name: "JavaScript",
-    color: "#F7DF1E" 
-  },
-  { 
-    icon: <FaReact />, 
-    name: "React",
-    color: "#61DAFB" 
-  },
-  { 
-    icon: <FaNode />, 
-    name: "Node.js",
-    color: "#339933" 
-  },
-  { 
-    icon: <FaPython />, 
-    name: "Python",
-    color: "#3776AB" 
-  },
-  { 
-    icon: <SiTailwindcss />, 
-    name: "Tailwind CSS",
-    color: "#06B6D4" 
-  },
-  { 
-    icon: <SiFlask />, 
-    name: "Flask",
-    color: "#FFFFFF" 
-  },
-  { 
-    icon: <FaDatabase />, 
-    name: "SQL",
-    color: "#4479A1" 
-  },
-  { 
-    icon: <SiMongodb />, 
-    name: "MongoDB",
-    color: "#47A248" 
-  },
-  { 
-    icon: <SiFirebase />, 
-    name: "Firebase",
-    color: "#FFCA28" 
-  },
-  { 
-    icon: <FaGit />, 
-    name: "Git",
-    color: "#F05032" 
-  }
-];
+const skillCategories = {
+  "Frontend": [
+    { icon: <FaHtml5 />, name: "HTML5" },
+    { icon: <FaCss3 />, name: "CSS3" },
+    { icon: <FaJs />, name: "JavaScript" },
+    { icon: <FaReact />, name: "React" },
+    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+  ],
+  "Backend": [
+    { icon: <FaNode />, name: "Node.js" },
+    { icon: <FaPython />, name: "Python" },
+    { icon: <SiFlask />, name: "Flask" },
+  ],
+  "Database": [
+    { icon: <FaDatabase />, name: "SQL" },
+    { icon: <SiMongodb />, name: "MongoDB" },
+    { icon: <SiFirebase />, name: "Firebase" },
+  ],
+  "Tools": [
+    { icon: <FaGit />, name: "Git" },
+  ]
+};
 
 function Skills() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
     <div 
       id="skills" 
-      className="py-20 px-8 relative"
-      style={{
-        background: "linear-gradient(to bottom, #1a1a2e 0%, #0f3460 100%)",
-        overflow: "hidden"
-      }}
+      className="py-24 px-8 bg-gray-50"
     >
-      {/* Background light effect */}
-      <div 
-        className="absolute inset-0 w-full h-full opacity-20"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 50%, rgba(56, 189, 248, 0.4) 0%, rgba(56, 189, 248, 0) 20%),
-            radial-gradient(circle at 80% 50%, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0) 20%)
-          `
-        }}
-      ></div>
+      <div className="max-w-7xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <motion.div 
+            className="inline-block mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="mono-text text-gray-600 text-lg tracking-wider">
+              skills
+            </span>
+          </motion.div>
+          
+          <motion.h2 
+            className="text-5xl md:text-7xl font-bold text-black mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Skills
+          </motion.h2>
+          
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Technologies and tools I use to bring ideas to life
+          </motion.p>
+        </div>
 
-      {/* Grid overlay */}
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: "40px 40px"
-        }}
-      ></div>
-
-      <motion.h2 
-        className="text-4xl font-bold text-center mb-16 relative z-10"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        style={{
-          color: "white",
-          textShadow: "0 0 15px rgba(56, 189, 248, 0.3)"
-        }}
-      >
-        Skills
-      </motion.h2>
-
-      <div className="max-w-6xl mx-auto relative">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
-          {skills.map((skill, index) => (
+        {/* Skills grid by category */}
+        <div className="space-y-12">
+          {Object.entries(skillCategories).map(([category, skills], categoryIndex) => (
             <motion.div
-              key={index}
-              className="flex flex-col items-center justify-center relative"
-              initial={{ opacity: 0, y: 20 }}
+              key={category}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              whileHover={{ y: -10 }}
+              transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
             >
-              {/* Circular background */}
-              <motion.div 
-                className="absolute w-24 h-24 rounded-full"
-                style={{
-                  background: hoveredIndex === index 
-                    ? `radial-gradient(circle, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.7) 70%, rgba(30, 41, 59, 0) 100%)`
-                    : `radial-gradient(circle, rgba(30, 41, 59, 0.7) 0%, rgba(30, 41, 59, 0.5) 70%, rgba(30, 41, 59, 0) 100%)`,
-                  boxShadow: hoveredIndex === index 
-                    ? `0 0 20px 5px rgba(${parseInt(skill.color.slice(1, 3), 16)}, ${parseInt(skill.color.slice(3, 5), 16)}, ${parseInt(skill.color.slice(5, 7), 16)}, 0.15)`
-                    : 'none',
-                  transform: `scale(${hoveredIndex === index ? 1.2 : 1})`,
-                  transition: 'all 0.3s ease'
-                }}
-              />
-              
-              {/* Skill icon */}
-              <motion.div 
-                className="text-6xl z-10 mb-2"
-                style={{
-                  color: hoveredIndex === index ? skill.color : 'rgba(255, 255, 255, 0.7)',
-                  filter: hoveredIndex === index ? `drop-shadow(0 0 8px rgba(${parseInt(skill.color.slice(1, 3), 16)}, ${parseInt(skill.color.slice(3, 5), 16)}, ${parseInt(skill.color.slice(5, 7), 16)}, 0.6))` : 'none',
-                  transition: 'all 0.3s ease'
-                }}
-              >
-                {skill.icon}
-              </motion.div>
-              
-              {/* Skill name with animated underline */}
-              <div className="text-center relative">
-                <p className="text-sm font-medium"
-                   style={{
-                     color: hoveredIndex === index ? skill.color : 'rgba(255, 255, 255, 0.7)',
-                     transition: 'color 0.3s ease'
-                   }}
-                >
-                  {skill.name}
-                </p>
-                {hoveredIndex === index && (
-                  <motion.div 
-                    className="absolute -bottom-1 left-0 h-0.5 w-full"
-                    style={{ background: skill.color }}
-                    initial={{ width: 0 }}
-                    animate={{ width: '100%' }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
+              {/* Category header */}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="p-2 bg-black rounded-lg">
+                  <FaCogs className="text-white text-lg" />
+                </div>
+                <h3 className="text-2xl font-bold text-black">{category}</h3>
+                <div className="flex-1 h-px bg-gray-200 ml-4"></div>
+              </div>
+
+              {/* Skills in this category */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {skills.map((skill, index) => (
+                  <motion.div
+                    key={`${category}-${index}`}
+                    className="group"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    onMouseEnter={() => setHoveredSkill(`${category}-${index}`)}
+                    onMouseLeave={() => setHoveredSkill(null)}
+                  >
+                    <div className={`relative p-6 rounded-2xl border transition-all duration-300 bg-white hover:bg-gray-50 ${
+                      hoveredSkill === `${category}-${index}` 
+                        ? 'border-black shadow-lg transform -translate-y-2' 
+                        : 'border-gray-200 hover:border-gray-300'
+                    }`}>
+                      {/* Skill icon */}
+                      <div className="text-center mb-4">
+                        <div className={`inline-flex p-4 rounded-xl transition-all duration-300 ${
+                          hoveredSkill === `${category}-${index}` 
+                            ? 'bg-black text-white' 
+                            : 'bg-gray-100 text-gray-600 group-hover:bg-gray-200'
+                        }`}>
+                          <div className="text-3xl">
+                            {skill.icon}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Skill name */}
+                      <h4 className="text-center font-semibold text-gray-800 group-hover:text-black transition-colors duration-300">
+                        {skill.name}
+                      </h4>
+
+                      {/* Hover effect line */}
+                      <motion.div 
+                        className="absolute bottom-0 left-0 h-1 bg-black rounded-b-2xl"
+                        initial={{ width: 0 }}
+                        animate={{ 
+                          width: hoveredSkill === `${category}-${index}` ? '100%' : 0 
+                        }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom section */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
+          <span className="mono-text text-gray-600 text-lg tracking-wider">
+            /skills
+          </span>
+        </motion.div>
       </div>
     </div>
   );
